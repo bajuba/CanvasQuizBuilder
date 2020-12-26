@@ -202,7 +202,7 @@ class Quizzes:
     <show_correct_answers_last_attempt>false</show_correct_answers_last_attempt>
     <only_visible_to_overrides>false</only_visible_to_overrides>
     <module_locked>false</module_locked>
-    <assignment identifier="g19a942d0e6d2cd3b55e47ac97123a655">
+    <assignment identifier="g19a942d0e6d2cd3b55e47ac97123a{randint(111,999)}">
     <title>Chapter 1 - Exercise 1</title>
     <due_at/>
     <lock_at/>
