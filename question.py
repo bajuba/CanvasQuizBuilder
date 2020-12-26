@@ -185,7 +185,7 @@ class Quizzes:
     <scoring_policy>keep_highest</scoring_policy>
     <hide_results></hide_results>
     <quiz_type>assignment</quiz_type>
-    <points_possible>10.0</points_possible>
+    <points_possible>20.0</points_possible>
     <require_lockdown_browser>false</require_lockdown_browser>
     <require_lockdown_browser_for_results>false</require_lockdown_browser_for_results>
     <require_lockdown_browser_monitor>false</require_lockdown_browser_monitor>

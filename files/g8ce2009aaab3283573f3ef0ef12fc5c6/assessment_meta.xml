@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <quiz identifier="g8ce2009aaab3283573f3ef0ef12e432c" xmlns="http://canvas.instructure.com/xsd/cccv1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://canvas.instructure.com/xsd/cccv1p0 https://canvas.instructure.com/xsd/cccv1p0.xsd">
-    <title>Chapter 2 - Exercise 2</title>
+    <quiz identifier="g8ce2009aaab3283573f3ef0ef12fc5c6" xmlns="http://canvas.instructure.com/xsd/cccv1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://canvas.instructure.com/xsd/cccv1p0 https://canvas.instructure.com/xsd/cccv1p0.xsd">
+    <title>Chapter 2 Exercise 3</title>
     <description></description>
     <shuffle_answers>true</shuffle_answers>
     <scoring_policy>keep_highest</scoring_policy>
     <hide_results></hide_results>
     <quiz_type>assignment</quiz_type>
-    <points_possible>10.0</points_possible>
+    <points_possible>20.0</points_possible>
     <require_lockdown_browser>false</require_lockdown_browser>
     <require_lockdown_browser_for_results>false</require_lockdown_browser_for_results>
     <require_lockdown_browser_monitor>false</require_lockdown_browser_monitor>
@@ -23,8 +23,8 @@
     <show_correct_answers_last_attempt>false</show_correct_answers_last_attempt>
     <only_visible_to_overrides>false</only_visible_to_overrides>
     <module_locked>false</module_locked>
-    <assignment identifier="g19a942d0e6d2cd3b55e47ac97123a821">
-    <title>Chapter 2 - Exercise 2</title>
+    <assignment identifier="g19a942d0e6d2cd3b55e47ac97123a661">
+    <title>Chapter 2 Exercise 3</title>
     <due_at/>
     <lock_at/>
     <unlock_at/>
@@ -32,7 +32,7 @@
     <workflow_state>published</workflow_state>
     <assignment_overrides>
     </assignment_overrides>
-    <quiz_identifierref>g8ce2009aaab3283573f3ef0ef12e432c</quiz_identifierref>
+    <quiz_identifierref>g8ce2009aaab3283573f3ef0ef12fc5c6</quiz_identifierref>
     <allowed_extensions></allowed_extensions>
     <has_group_category>false</has_group_category>
     <points_possible>10.0</points_possible>
@@ -63,7 +63,7 @@
       <post_manually>false</post_manually>
     </post_policy>
     </assignment>
-    <assignment_group_identifierref>g74aee8be22838d8f9a91a74a5f1fa976</assignment_group_identifierref>
+    <assignment_group_identifierref>g74aee8be22838d8f9a91a74a5f1fa256</assignment_group_identifierref>
     <assignment_overrides>
     </assignment_overrides>
     </quiz>
