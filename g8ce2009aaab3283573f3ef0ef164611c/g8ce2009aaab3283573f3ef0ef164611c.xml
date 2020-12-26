@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
+        <assessment ident="g8ce2009aaab3283573f3ef0ef164611c" title="Chapter 2 - Exercise 1">
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_maxattempts</fieldlabel>
+              <fieldentry>unlimited</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+          <section ident="root_section">
+            <item ident="g5a12953047f11134eb0ab7cc6f037ecd" title="01. Percent Difference">
+              <itemmetadata>
+                <qtimetadata>
+                  <qtimetadatafield>
+                    <fieldlabel>question_type</fieldlabel>
+                    <fieldentry>fill_in_multiple_blanks_question</fieldentry>
+                  </qtimetadatafield>
+                  <qtimetadatafield>
+                    <fieldlabel>points_possible</fieldlabel>
+                    <fieldentry>10.0</fieldentry>
+                  </qtimetadatafield>
+                  <qtimetadatafield>
+                    <fieldlabel>original_answer_ids</fieldlabel>
+                    <fieldentry>1112,1113,1114,1115,1116,1117,1118,1119,1120,1121
+                    </fieldentry>
+                  </qtimetadatafield>
+                  <qtimetadatafield>
+                    <fieldlabel>assessment_question_identifierref</fieldlabel>
+                    <fieldentry>g3870a3575fef60c4c259b24d7d422fbd</fieldentry>
+                  </qtimetadatafield>
+                </qtimetadata>
+              </itemmetadata>
+              <presentation>
+                <material>
+                  <mattext texttype="text/html">&lt;div&gt;
+      &lt;p&gt;You have been asked to design a program for calculating the percentage increase or decrease of the market value of the Connors Building from January 2010 to January 2011. The program should ask the user for the January 2010 price and the January 2011 price, compute the difference, and then calculate and display the percentage increase or decrease over the January 2010 price.&lt;/p&gt;&lt;p&gt;priceIn2010 = [1]([2]("What was the price in 2010?"));&lt;/p&gt;&lt;p&gt;priceIn2011 = [3]([4]("What was the price in 2011?"));&lt;/p&gt;&lt;p&gt;difference = [5]&lt;/p&gt;&lt;p&gt;difPercent = ([6] / [7]) * 100;&lt;/p&gt;&lt;p&gt;[8]("The price has changed by " + [9] + "% between 2010 and 2011");&lt;/p&gt;&lt;p&gt;Expected Output:&lt;/p&gt;&lt;p&gt;>>The price has changed by 50% between 2010 and 2011&lt;/p&gt;&lt;/div&gt;
+        </mattext></material><response_lid ident="response_1">
+              <material>
+                <mattext>1</mattext>
+              </material>
+              <render_choice>
+              <response_label ident="1112">
+                    <material>
+                      <mattext texttype="text/plain">parseInt</mattext>
+                    </material>
+                  </response_label>
+                  </render_choice>
+                </response_lid>
+                <response_lid ident="response_2">
+              <material>
+                <mattext>2</mattext>
+              </material>
+              <render_choice>
+              <response_label ident="1113">
+                    <material>
+                      <mattext texttype="text/plain">prompt</mattext>
+                    </material>
+                  </response_label>
+                  </render_choice>
+                </response_lid>
+                <response_lid ident="response_3">
+              <material>
+                <mattext>3</mattext>
+              </material>
+              <render_choice>
+              <response_label ident="1114">
+                    <material>
+                      <mattext texttype="text/plain">parseInt</mattext>
+                    </material>
+                  </response_label>
+                  </render_choice>
+                </response_lid>
+                <response_lid ident="response_4">
+              <material>
+                <mattext>4</mattext>
+              </material>
+              <render_choice>
+              <response_label ident="1115">
+                    <material>
+                      <mattext texttype="text/plain">prompt</mattext>
+                    </material>
+                  </response_label>
+                  </render_choice>
+                </response_lid>
+                <response_lid ident="response_5">
+              <material>
+                <mattext>5</mattext>
+              </material>
+              <render_choice>
+              <response_label ident="1116">
+                    <material>
+                      <mattext texttype="text/plain">priceIn2011 - priceIn2010;</mattext>
+                    </material>
+                  </response_label>
+                  <response_label ident="1117">
+                    <material>
+                      <mattext texttype="text/plain">price2010 - priceIn2011;</mattext>
+                    </material>
+                  </response_label>
+                  </render_choice>
+                </response_lid>
+                <response_lid ident="response_6">
+              <material>
+                <mattext>6</mattext>
+              </material>
+              <render_choice>
+              <response_label ident="1118">
+                    <material>
+                      <mattext texttype="text/plain">difference</mattext>
+                    </material>
+                  </response_label>
+                  </render_choice>
+                </response_lid>
+                <response_lid ident="response_7">
+              <material>
+                <mattext>7</mattext>
+              </material>
+              <render_choice>
+              <response_label ident="1119">
+                    <material>
+                      <mattext texttype="text/plain">priceIn2010</mattext>
+                    </material>
+                  </response_label>
+                  </render_choice>
+                </response_lid>
+                <response_lid ident="response_8">
+              <material>
+                <mattext>8</mattext>
+              </material>
+              <render_choice>
+              <response_label ident="1120">
+                    <material>
+                      <mattext texttype="text/plain">console.log</mattext>
+                    </material>
+                  </response_label>
+                  </render_choice>
+                </response_lid>
+                <response_lid ident="response_9">
+              <material>
+                <mattext>9</mattext>
+              </material>
+              <render_choice>
+              <response_label ident="1121">
+                    <material>
+                      <mattext texttype="text/plain">difPercent</mattext>
+                    </material>
+                  </response_label>
+                  </render_choice>
+                </response_lid>
+                <resprocessing><itemfeedback ident="correct_fb">
+                <flow_mat>
+                  <material>
+                    <mattext texttype="text/html">&lt;p&gt;Check out a working example of this program:&lt;/p&gt;&lt;a class="instructure_file_link inline_disabled" href="https://repl.it/@jmunger/CIS-156-Exercise-2-1-juwslk" target="_blank"&gt;Chapter 2 Exercise 1&lt;/a&gt;&lt;/p&gt;</mattext>
+                  </material>
+                </flow_mat>
+              </itemfeedback>
+            </item>
+          </section>
+        </assessment>
+      </questestinterop>
+
+      
