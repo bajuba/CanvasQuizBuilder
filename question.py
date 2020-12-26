@@ -163,7 +163,7 @@ class Quizzes:
       
       
 
-      meta = self.create_meta(question.guid)
+      meta = self.create_meta(question.guid,question.quiz_title)
       complete_quiz_text = start+question_area+answers_area+outcomes_area+feedback_area
       self.create_file(question.guid,complete_quiz_text,meta)
     if not os.path.exists('files/non_cc_assessment'):
@@ -176,10 +176,10 @@ class Quizzes:
     shutil.make_archive("newquiz", 'zip', 'files')
   def para(self,text):
     return "&lt;p&gt;"+text+"&lt;/p&gt;"
-  def create_meta(self,guid):
+  def create_meta(self,guid,title):
     meta = f'''<?xml version="1.0" encoding="UTF-8"?>
     <quiz identifier="{guid}" xmlns="http://canvas.instructure.com/xsd/cccv1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://canvas.instructure.com/xsd/cccv1p0 https://canvas.instructure.com/xsd/cccv1p0.xsd">
-    <title>Chapter 1 - Exercise 1</title>
+    <title>{title}</title>
     <description></description>
     <shuffle_answers>true</shuffle_answers>
     <scoring_policy>keep_highest</scoring_policy>
@@ -203,7 +203,7 @@ class Quizzes:
     <only_visible_to_overrides>false</only_visible_to_overrides>
     <module_locked>false</module_locked>
     <assignment identifier="g19a942d0e6d2cd3b55e47ac97123a{randint(111,999)}">
-    <title>Chapter 1 - Exercise 1</title>
+    <title>{title}</title>
     <due_at/>
     <lock_at/>
     <unlock_at/>
