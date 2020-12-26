@@ -242,7 +242,7 @@ class Quizzes:
       <post_manually>false</post_manually>
     </post_policy>
     </assignment>
-    <assignment_group_identifierref>g74aee8be22838d8f9a91a74a5f1fa5f7</assignment_group_identifierref>
+    <assignment_group_identifierref>g74aee8be22838d8f9a91a74a5f1fa{randint(111,999)}</assignment_group_identifierref>
     <assignment_overrides>
     </assignment_overrides>
     </quiz>'''
