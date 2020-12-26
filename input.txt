@@ -1,0 +1,105 @@
+Chapter 2 - Exercise 1
+###
+01. Percent Difference
+###
+You have been asked to design a program for calculating the percentage increase or decrease of the market value of the Connors Building from January 2010 to January 2011. The program should ask the user for the January 2010 price and the January 2011 price, compute the difference, and then calculate and display the percentage increase or decrease over the January 2010 price.
+priceIn2010 = [1]([2]("What was the price in 2010?"));
+priceIn2011 = [3]([4]("What was the price in 2011?"));
+difference = [5]
+difPercent = ([6] / [7]) * 100;
+[8]("The price has changed by " + [9] + "% between 2010 and 2011");
+Expected Output:
+>>The price has changed by 50% between 2010 and 2011
+###
+1~parseInt
+2~prompt
+3~parseInt
+4~prompt
+5~priceIn2011 - priceIn2010;~price2010 - priceIn2011;
+6~difference
+7~priceIn2010
+8~console.log
+9~difPercent
+###
+Check out a working example of this program:
+Chapter 2 Exercise 1~https://repl.it/@jmunger/CIS-156-Exercise-2-1-juwslk
+###
+Chapter 2 - Exercise 2
+###
+02. Quarterly Sales
+###
+You have the final sales figures for the four quarters in 2010 for Bennet’s Used Auto Sales, and you are to design a program that asks for the sales figures, computes the total sales for the year, and calculates and displays the average quarterly sales for the year.
+quarter1 = [1]([2]("Enter sales for Quarter 1"));
+quarter2 = [3]([4]("Enter sales for Quarter 2"));
+quarter3 = [5]([6]("Enter sales for Quarter 3"));
+quarter4 = [7]([8]("Enter sales for Quarter 4"));
+total = quarter1 + quarter2 + quarter3 + quarter4;
+average = [9]
+[10]("Total sales for the year: " + [11]);
+[12]("Average sales per quarter: " + [13]);
+###
+1~parseInt
+2~prompt
+3~parseInt
+4~prompt
+5~parseInt
+6~prompt
+7~parseInt
+8~prompt
+9~total / 4;
+10~console.log
+11~total
+12~console.log
+13~average
+###
+Check out a working example of this program:
+Chapter 2 Exercise 2~https://repl.it/@jmunger/CIS-156-Exercise-2-2-wksle
+###
+Chapter 2 Exercise 3
+###
+03. Budget
+###
+You’ve been asked to write a program that computes percentages for specific categories in a personal budget. The program should ask the user to enter estimated monthly expenditures for the following categories: Rent Payment, Food, Utilities, and All Other. Your program should add the amounts, display the total, and compute and display the percentage for each category. Dollar amounts should be displayed with two decimal places and percentages should be displayed with one decimal place.
+rent = [1]([2]("Enter monthly rent payment"));
+food = [3]([4]("Enter monthly food costs"));
+utilities = [5]([6]("Enter monthly utility costs"));
+other = [7]([8]("Enter any other expenditures"));
+total = rent + food + utilities + other;
+[9]("Your total monthly costs: $" + [10].[11]);
+[12]("You spend " + ([13]).[14] + "% on Rent");
+[15]("You spend " + ([16]).[17] + "% on Food");
+[18]("You spend " + ([19]).[20] + "% on Utilities");
+[21]("You spend " + ([22]).[23] + "% on Other");
+Expected Output:
+>>Your total monthly costs: $850.00
+>>You spend 47.1% on Rent
+>>You spend 23.5% on Food
+>>You spend 17.6% on Utilities
+>>You spend 11.8% on Other
+###
+1~parseInt
+2~prompt
+3~parseInt
+4~prompt
+5~parseInt
+6~prompt
+7~parseInt
+8~prompt
+9~console.log
+10~total~(total)
+11~toFixed(2)
+12~console.log
+13~rent / total
+14~toFixed(1)
+15~console.log
+16~food / total
+17~toFixed(1)
+18~console.log
+19~utilities / total
+20~toFixed(1)
+21~console.log
+22~other / total
+23~toFixed(1)
+###
+Check out a working example of this program:
+Chapter 2 Exercise 2~https://repl.it/@jmunger/CIS-156-Exercise-2-3-yksle

@@ -1,0 +1,356 @@
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
+    <assessment ident="g8ce2009aaab3283573f3ef0ef16429bb" title="Chapter 2 - Exercise 2">
+      <qtimetadata>
+        <qtimetadatafield>
+          <fieldlabel>cc_maxattempts</fieldlabel>
+          <fieldentry>unlimited</fieldentry>
+        </qtimetadatafield>
+      </qtimetadata>
+      <section ident="root_section">
+        <item ident="g5a12953047f11134eb0ab7cc6f037ecd" title="02. Quarterly Sales">
+          <itemmetadata>
+            <qtimetadata>
+              <qtimetadatafield>
+                <fieldlabel>question_type</fieldlabel>
+                <fieldentry>fill_in_multiple_blanks_question</fieldentry>
+              </qtimetadatafield>
+              <qtimetadatafield>
+                <fieldlabel>points_possible</fieldlabel>
+                <fieldentry>10.0</fieldentry>
+              </qtimetadatafield>
+              <qtimetadatafield>
+                <fieldlabel>original_answer_ids</fieldlabel>
+                <fieldentry>1122,1123,1124,1125,1126,1127,1128,1129,1130,1131,1132,1133,1134
+                </fieldentry>
+              </qtimetadatafield>
+              <qtimetadatafield>
+                <fieldlabel>assessment_question_identifierref</fieldlabel>
+                <fieldentry>g3870a3575fef60c4c259b24d7d422fbd</fieldentry>
+              </qtimetadatafield>
+            </qtimetadata>
+          </itemmetadata>
+          <presentation>
+            <material>
+              <mattext texttype="text/html">&lt;div&gt;
+  &lt;p&gt;You have the final sales figures for the four quarters in 2010 for Bennet’s Used Auto Sales, and you are to design a program that asks for the sales figures, computes the total sales for the year, and calculates and displays the average quarterly sales for the year.&lt;p&gt;&lt;p&gt;quarter1 = [1]([2]("Enter sales for Quarter 1"));&lt;p&gt;&lt;p&gt;quarter2 = [3]([4]("Enter sales for Quarter 2"));&lt;p&gt;&lt;p&gt;quarter3 = [5]([6]("Enter sales for Quarter 3"));&lt;p&gt;&lt;p&gt;quarter4 = [7]([8]("Enter sales for Quarter 4"));&lt;p&gt;&lt;p&gt;total = quarter1 + quarter2 + quarter3 + quarter4;&lt;p&gt;&lt;p&gt;average = [9]&lt;p&gt;&lt;p&gt;[10]("Total sales for the year: " + [11]);&lt;p&gt;&lt;p&gt;[12]("Average sales per quarter: " + [13]);&lt;p&gt;&lt;/div&gt;
+    </mattext></material>
+          <response_lid ident="response_1">
+          <material>
+            <mattext>1</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1122">
+                <material>
+                  <mattext texttype="text/plain">parseInt</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          <response_lid ident="response_2">
+          <material>
+            <mattext>2</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1123">
+                <material>
+                  <mattext texttype="text/plain">prompt</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          <response_lid ident="response_3">
+          <material>
+            <mattext>3</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1124">
+                <material>
+                  <mattext texttype="text/plain">parseInt</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          <response_lid ident="response_4">
+          <material>
+            <mattext>4</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1125">
+                <material>
+                  <mattext texttype="text/plain">prompt</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          <response_lid ident="response_5">
+          <material>
+            <mattext>5</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1126">
+                <material>
+                  <mattext texttype="text/plain">parseInt</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          <response_lid ident="response_6">
+          <material>
+            <mattext>6</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1127">
+                <material>
+                  <mattext texttype="text/plain">prompt</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          <response_lid ident="response_7">
+          <material>
+            <mattext>7</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1128">
+                <material>
+                  <mattext texttype="text/plain">parseInt</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          <response_lid ident="response_8">
+          <material>
+            <mattext>8</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1129">
+                <material>
+                  <mattext texttype="text/plain">prompt</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          <response_lid ident="response_9">
+          <material>
+            <mattext>9</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1130">
+                <material>
+                  <mattext texttype="text/plain">total / 4;</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          <response_lid ident="response_10">
+          <material>
+            <mattext>10</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1131">
+                <material>
+                  <mattext texttype="text/plain">console.log</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          <response_lid ident="response_11">
+          <material>
+            <mattext>11</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1132">
+                <material>
+                  <mattext texttype="text/plain">total</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          <response_lid ident="response_12">
+          <material>
+            <mattext>12</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1133">
+                <material>
+                  <mattext texttype="text/plain">console.log</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          <response_lid ident="response_13">
+          <material>
+            <mattext>13</mattext>
+          </material>
+          <render_choice>
+          
+              <response_label ident="1134">
+                <material>
+                  <mattext texttype="text/plain">average</mattext>
+                </material>
+              </response_label>
+              
+              </render_choice>
+            </response_lid>
+            
+          </presentation>
+          
+          <resprocessing>
+            <outcomes>
+              <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+            </outcomes>
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_1">1122</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_2">1123</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_3">1124</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_4">1125</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_5">1126</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_6">1127</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_7">1128</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_8">1129</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_9">1130</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_10">1131</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_11">1132</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_12">1133</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+              <respcondition>
+                <conditionvar>
+                  <varequal respident="response_13">1134</varequal>
+                </conditionvar>
+                <setvar varname="SCORE" action="Add">7.69</setvar>
+              </respcondition>
+              
+            
+          <itemfeedback ident="correct_fb">
+            <flow_mat>
+              <material>
+                <mattext texttype="text/html">&lt;p&gt;Check out a working example of this program:&lt;p&gt;&lt;a class="instructure_file_link inline_disabled" href="https://repl.it/@jmunger/CIS-156-Exercise-2-2-wksle" target="_blank"&gt;Chapter 2 Exercise 2&lt;/a&gt;&lt;/p&gt;</mattext>
+              </material>
+            </flow_mat>
+          </itemfeedback>
+        </item>
+      </section>
+    </assessment>
+  </questestinterop>
+
+  
