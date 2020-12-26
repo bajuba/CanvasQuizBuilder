@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
       <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
-        <assessment ident="g8ce2009aaab3283573f3ef0ef17af701" title="Chapter 2 - Exercise 2">
+        <assessment ident="g8ce2009aaab3283573f3ef0ef1cfed92" title="Chapter 2 - Exercise 2">
           <qtimetadata>
             <qtimetadatafield>
               <fieldlabel>cc_maxattempts</fieldlabel>

@@ -51,16 +51,18 @@ class Quizzes:
       count+=1
     return questions
   def create_file(self,guid,complete_quiz_text,meta):
-    os.mkdir(guid)
+    os.mkdir(f"files/{guid}")
     
-    myfile = open(f"{guid}/{guid}.xml","w")
+    myfile = open(f"files/{guid}/{guid}.xml","w")
     myfile.write(complete_quiz_text)
     myfile.close()
 
-    myfile = open(f"{guid}/assessment_meta.xml","w")
+    myfile = open(f"files/{guid}/assessment_meta.xml","w")
     myfile.write(meta)
     myfile.close()
   def create_export_file(self):
+    if not os.path.exists('files'):
+      os.mkdir("files")
     for question in self.questions:
       #print(theQuiz.questions[0].text)
       
@@ -164,12 +166,15 @@ class Quizzes:
       meta = self.create_meta(question.guid)
       complete_quiz_text = start+question_area+answers_area+outcomes_area+feedback_area
       self.create_file(question.guid,complete_quiz_text,meta)
-    if not os.path.exists('non_cc_assessment'):
-      os.mkdir("non_cc_assessment")
+    if not os.path.exists('files/non_cc_assessment'):
+      os.mkdir("files/non_cc_assessment")
 
-    myfile = open("imsmanifest.xml", "w")
+    myfile = open("files/imsmanifest.xml", "w")
     myfile.write(self.build_manifest(self.questions))
     myfile.close()
+
+    shutil.make_archive("newquiz", 'zip', 'files')
+
   def para(self,text):
     return "&lt;p&gt;"+text+"&lt;/p&gt;"
   def create_meta(self,guid):
@@ -297,7 +302,7 @@ class Quizzes:
     return idents[:-1]
   def cleanup(self):
     my_dir = os.path.dirname(os.path.realpath(__file__))
-
+    my_dir = "file/"+my_dir
 
     for item in os.walk(my_dir):
       if  item[0].find("g8ce2009") >= 0:
