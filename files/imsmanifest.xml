@@ -27,18 +27,18 @@
         </imsmd:lom>
       </metadata>
       <organizations/>
-      <resources><resource identifier="g8ce2009aaab3283573f3ef0ef197841e" type="imsqti_xmlv1p2">
-          <file href="g8ce2009aaab3283573f3ef0ef197841e/g8ce2009aaab3283573f3ef0ef197841e.xml"/>
-          <dependency identifierref="ge4d8d35e8e41f702d320795e0dafe965"/>
+      <resources><resource identifier="g8ce2009aaab3283573f3ef0ef1644cab" type="imsqti_xmlv1p2">
+          <file href="g8ce2009aaab3283573f3ef0ef1644cab/g8ce2009aaab3283573f3ef0ef1644cab.xml"/>
+          <dependency identifierref="ge4d8d35e8e41f702d320795e0dd11ebd"/>
         </resource>
-        <resource identifier="ge4d8d35e8e41f702d320795e0dafe965" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g8ce2009aaab3283573f3ef0ef197841e/assessment_meta.xml">
-          <file href="g8ce2009aaab3283573f3ef0ef197841e/assessment_meta.xml"/>
-        </resource><resource identifier="g8ce2009aaab3283573f3ef0ef1cfed92" type="imsqti_xmlv1p2">
-          <file href="g8ce2009aaab3283573f3ef0ef1cfed92/g8ce2009aaab3283573f3ef0ef1cfed92.xml"/>
-          <dependency identifierref="ge4d8d35e8e41f702d320795e0dda3a57"/>
+        <resource identifier="ge4d8d35e8e41f702d320795e0dd11ebd" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g8ce2009aaab3283573f3ef0ef1644cab/assessment_meta.xml">
+          <file href="g8ce2009aaab3283573f3ef0ef1644cab/assessment_meta.xml"/>
+        </resource><resource identifier="g8ce2009aaab3283573f3ef0ef1bdd2b5" type="imsqti_xmlv1p2">
+          <file href="g8ce2009aaab3283573f3ef0ef1bdd2b5/g8ce2009aaab3283573f3ef0ef1bdd2b5.xml"/>
+          <dependency identifierref="ge4d8d35e8e41f702d320795e0dad6c8e"/>
         </resource>
-        <resource identifier="ge4d8d35e8e41f702d320795e0dda3a57" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g8ce2009aaab3283573f3ef0ef1cfed92/assessment_meta.xml">
-          <file href="g8ce2009aaab3283573f3ef0ef1cfed92/assessment_meta.xml"/>
+        <resource identifier="ge4d8d35e8e41f702d320795e0dad6c8e" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g8ce2009aaab3283573f3ef0ef1bdd2b5/assessment_meta.xml">
+          <file href="g8ce2009aaab3283573f3ef0ef1bdd2b5/assessment_meta.xml"/>
         </resource></resources>
     </manifest>
     

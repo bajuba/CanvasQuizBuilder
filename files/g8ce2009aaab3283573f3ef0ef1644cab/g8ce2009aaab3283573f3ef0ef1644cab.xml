@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
       <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
-        <assessment ident="g8ce2009aaab3283573f3ef0ef197841e" title="Chapter 2 - Exercise 1">
+        <assessment ident="g8ce2009aaab3283573f3ef0ef1644cab" title="Chapter 2 - Exercise 1">
           <qtimetadata>
             <qtimetadatafield>
               <fieldlabel>cc_maxattempts</fieldlabel>
@@ -147,6 +147,74 @@
                   </response_label>
                   </render_choice>
                 </response_lid>
+                </presentation>
+              
+              <resprocessing>
+                <outcomes>
+                  <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+                </outcomes><respcondition>
+                    <conditionvar>
+                      <varequal respident="response_1">1112</varequal>
+                    </conditionvar>
+                    <setvar varname="SCORE" action="Add">11.11</setvar>
+                  </respcondition>
+                  
+                <respcondition>
+                    <conditionvar>
+                      <varequal respident="response_2">1113</varequal>
+                    </conditionvar>
+                    <setvar varname="SCORE" action="Add">11.11</setvar>
+                  </respcondition>
+                  
+                <respcondition>
+                    <conditionvar>
+                      <varequal respident="response_3">1114</varequal>
+                    </conditionvar>
+                    <setvar varname="SCORE" action="Add">11.11</setvar>
+                  </respcondition>
+                  
+                <respcondition>
+                    <conditionvar>
+                      <varequal respident="response_4">1115</varequal>
+                    </conditionvar>
+                    <setvar varname="SCORE" action="Add">11.11</setvar>
+                  </respcondition>
+                  
+                <respcondition>
+                    <conditionvar>
+                      <varequal respident="response_5">1116</varequal>
+                    </conditionvar>
+                    <setvar varname="SCORE" action="Add">11.11</setvar>
+                  </respcondition>
+                  
+                <respcondition>
+                    <conditionvar>
+                      <varequal respident="response_6">1118</varequal>
+                    </conditionvar>
+                    <setvar varname="SCORE" action="Add">11.11</setvar>
+                  </respcondition>
+                  
+                <respcondition>
+                    <conditionvar>
+                      <varequal respident="response_7">1119</varequal>
+                    </conditionvar>
+                    <setvar varname="SCORE" action="Add">11.11</setvar>
+                  </respcondition>
+                  
+                <respcondition>
+                    <conditionvar>
+                      <varequal respident="response_8">1120</varequal>
+                    </conditionvar>
+                    <setvar varname="SCORE" action="Add">11.11</setvar>
+                  </respcondition>
+                  
+                <respcondition>
+                    <conditionvar>
+                      <varequal respident="response_9">1121</varequal>
+                    </conditionvar>
+                    <setvar varname="SCORE" action="Add">11.11</setvar>
+                  </respcondition>
+                  
                 <resprocessing><itemfeedback ident="correct_fb">
                 <flow_mat>
                   <material>

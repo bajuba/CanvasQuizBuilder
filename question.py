@@ -146,7 +146,7 @@ class Quizzes:
                   </respcondition>
                   
                 '''
-      outcomes_area="<resprocessing>"
+      outcomes_area+="<resprocessing>"
       feedback_area=f'''<itemfeedback ident="correct_fb">
                 <flow_mat>
                   <material>
@@ -174,7 +174,6 @@ class Quizzes:
     myfile.close()
 
     shutil.make_archive("newquiz", 'zip', 'files')
-
   def para(self,text):
     return "&lt;p&gt;"+text+"&lt;/p&gt;"
   def create_meta(self,guid):
@@ -302,7 +301,7 @@ class Quizzes:
     return idents[:-1]
   def cleanup(self):
     my_dir = os.path.dirname(os.path.realpath(__file__))
-    my_dir = "file/"+my_dir
+    my_dir = my_dir+"/files"
 
     for item in os.walk(my_dir):
       if  item[0].find("g8ce2009") >= 0:
