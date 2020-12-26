@@ -146,7 +146,7 @@ class Quizzes:
                   </respcondition>
                   
                 '''
-      outcomes_area+="<resprocessing>"
+      outcomes_area+="</resprocessing>"
       feedback_area=f'''<itemfeedback ident="correct_fb">
                 <flow_mat>
                   <material>
