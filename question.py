@@ -76,7 +76,7 @@ class Quizzes:
             </qtimetadatafield>
           </qtimetadata>
           <section ident="root_section">
-            <item ident="g5a12953047f11134eb0ab7cc6f037ecd" title="{question.question_title}">
+            <item ident="g5a12953047f11134eb0ab7cc6f037{randint(111,999)}" title="{question.question_title}">
               <itemmetadata>
                 <qtimetadata>
                   <qtimetadatafield>
