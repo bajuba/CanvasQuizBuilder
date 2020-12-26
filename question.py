@@ -1,6 +1,7 @@
 from random import randint
 import os
 import shutil
+from pprint import pprint
 # 0-quize title
 # 0-question title, 1-question text, 2-anwers, 3-feedback
 class Quizzes:
@@ -17,38 +18,96 @@ class Quizzes:
     for line in lines:
       stripped_lines.append(line.strip())
 
-
-    parts = []
-    section = []
-    for line in stripped_lines:
-      if line == "###":
-        parts.append(section)
-        section = []
-      else:
-        section.append(line)
-
-
+    quizzes = []
+    quiz = {}
+    question = {}
+    quiz["questions"] = []
+    question['text'] = ""
+    question['answers'] = []
+    question["feedback"] = []
     count = 0
+    for line in stripped_lines:
+      
+      if line == "######":
+        if count == 5:
+          quiz["questions"].append(question)
+          question = {}
+          question['text'] = ""
+          question['answers'] = []
+          question["feedback"] = []
+        
+        count=0
+        quizzes.append(quiz)
+        quiz = {}
+        quiz["questions"] = []
+      elif line == "###":
+        if count == 5:
+          quiz["questions"].append(question)
+          question = {}
+          question['text'] = ""
+          question['answers'] = []
+          question["feedback"] = []
 
+          count=1
+          continue
+        count += 1
+      else:
+        if count == 0:
+          quiz["title"] = line
+        else:
+          if count == 1:
+            question["title"] = line
+          if count == 2:
+            question["type"] = line
+          if count == 3:
+            question["text"] += line
+          if count == 4:
+            question["answers"].append(line)
+          if count == 5:
+            question["feedback"].append(line)
+    pprint(quizzes)
+
+
+      # if line == "######":
+      #   quizzes.append([parts[0],questions])
+      #   count = 0
+      #   qparts = []
+      #   for x in range(1,len(parts)):
+      #     if x%4==0:
+      #       questions.append(qparts)
+      #       qparts = []
+      #       count = 0
+      #     else:
+      #       qparts.append(part)
+      #   questions = []
+      #   parts = []
+      #   section = []
+      # elif line == "###":
+      #   parts.append(section)
+      #   section = []
+      # else:
+      #   section.append(line)
 
     questions = []
-    #pprint(parts)
-    for part in parts:
-      if count==0:
-        quiztitle=part
-      elif count==1:
-        questiontitle = part
-      elif count==2:
-        text = part
-      elif count==3:
-        answers = part
-      elif count==4:
-        feedback = part
-        newQ = FillQuestion(quiztitle,questiontitle,text,answers,feedback)
-        questions.append(newQ)
-        count = 0
-        continue
-      count+=1
+    # pprint(quizzes)
+    for quiz in quizzes:
+      count = 0
+      pprint(quiz)
+      quiztitle=quiz[0]
+      for x in range(1,len(quiz)):
+          # pprint(quiz[x])
+          questiontitle = quiz[x][0]
+          questiontype = quiz[x][1]
+          text = quiz[x][2][0]
+          answers = quiz[x][3][0]
+          feedback = quiz[x][4][0]
+          if questiontype == "multiblank":
+            newQ = FillQuestion(quiztitle,questiontitle,text,answers,feedback)
+          elif questiontype == "multiselect":
+            newQ = DropQuiz(quiztitle)
+          questions.append(newQ)
+          count = 0
+        
     return questions
   def create_file(self,guid,complete_quiz_text,meta):
     os.mkdir(f"files/{guid}")
@@ -366,7 +425,81 @@ class FillQuestion:
         for response in answer[1]:
             idents += response.ident+","
       return idents[:-1]
+
+class DropQuiz:
+  quiz_identifier = 'g8ce2009aaab3283573f3ef0ef1'
+  #0-35
+  def __init__(self,quiz_title,questions ):
+    self.guid = DropQuiz.quiz_identifier+self.gen_guid()
+    self.quiz_title = quiz_title[0]
+    self.dropdowns = questions
+
+  def gen_guid(self):
+    guid = ""
+    for i in range(0,6):
+      num = randint(0,15)
+      if(num <= 9):
+        num += 48
+      else:
+        num += 87
+      guid += chr(num)
+    return guid
     
+  
+
+  def format_feedback(self, feedback):
+      new_feedback = []
+      feedback_set = []
+
+      for feeditem in feedback:
+        if("~" in feeditem):
+          feedback_set = feeditem.split("~")
+          new_feedback.append(feedback_set[0])
+          new_feedback.append(feedback_set[1])
+        else:
+          new_feedback.append(feeditem)
+      return new_feedback
+  def get_idents(self):
+    idents = ""
+    for answer in self.answers:
+      for response in answer[1]:
+          idents += response.ident+","
+    return idents[:-1]
+
+
+
+
+
+class DropQuestion:
+  def __init__(self,question_title,text,answers,feedback ):
+    self.question_title = question_title[0]
+    self.text = text
+    self.answer = self.format_answers(answers)
+    self.idents = self.get_idents()
+    self.feedback = self.format_feedback(feedback)
+  def format_answers(self, answers):
+    new_answers = []
+    answer_set = []
+
+    for answer_set in answers:
+      options_set = answer_set.split("~")
+      responses = []
+      for x in range(1,len(answer_set)):
+        new_response = Response(answer_set[x])
+        responses.append(new_response)
+      new_answers.append([answer_set[0],responses])
+    return new_answers
+
+  def get_idents(self):
+    idents = ""
+    for answer in self.answers:
+      for response in answer[1]:
+          idents += response.ident+","
+    return idents[:-1]
+
+
+
+
 class Response:
     id = 1111
     def __init__(self,text):

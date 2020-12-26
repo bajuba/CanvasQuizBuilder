@@ -1,0 +1,42 @@
+Quiz Name
+###
+Question Name
+###
+Quiz Question with blanks labeled by number [1],[2]...
+###
+Correct answers for responses
+~answer1~answer2~answer3
+###
+Feedback Message
+Link Text~Link Address
+###
+Add next quiz...
+
+----------------------------
+Example of adding 2 quizzes.
+----------------------------
+
+The best Quiz
+###
+The best Question
+###
+Do you like fruit?[1] Who is that dude who planted all those orchards in the olden days? Johnny [2]seed.
+###
+1~yes
+2~apple~Apple~APPLE;
+###
+You did it. Here is a picture as your reward.
+Johnny Appleseed~https://www.google.com/search?q=johnny+appleseed&newwindow=1&sxsrf=ALeKk02BCk6lXlyBnHWY0hwPA3_crGkhWA:1609010571510&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi9vre8r-ztAhXfAZ0JHeOXAN4Q_AUoAnoECBUQBA&biw=1536&bih=722
+###
+The Wurst Quiz
+###
+Sausage Question
+###
+Do you like sausage?[1] I like hotdogs but I really like [2]wurst.
+###
+1~yes
+2~brat~Brat~BRAT;
+###
+You did it. Here is a picture as your reward.
+Bratwurst~https://www.google.com/search?q=bratwurst&newwindow=1&rlz=1C1GCEA_enUS920US920&sxsrf=ALeKk00Ka2wsTbXyKU57ppyoRCAlRoNXMA:1609010693059&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjjq7L2r-ztAhXGZs0KHbEHDnYQ_AUoAXoECBMQAw&biw=1536&bih=722
+###

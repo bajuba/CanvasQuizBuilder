@@ -6,7 +6,7 @@ import shutil
 
 
 
-theQuiz = Quizzes("input.txt")
+theQuiz = Quizzes("multiselect_multiq_format.txt")
 
 #get rid of last job's files/folders
 theQuiz.cleanup()
