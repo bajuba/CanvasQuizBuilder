@@ -1,10 +1,94 @@
 from question import FillQuestion, Quizzes
 from pprint import pprint
 import os
+import shutil
 my_file = open("input.txt","r")
 
 def para(text):
-    return "&lt;p&gt;"+text+"&lt;p&gt;"
+    return "&lt;p&gt;"+text+"&lt;/p&gt;"
+#build manifest
+def build_manifest(questions):
+  manifest = f'''<?xml version="1.0" encoding="UTF-8"?>
+  <manifest identifier="gc1c043c4d56096c5d62f1217d8a35bf3" xmlns="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1" xmlns:lom="http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_v1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1 http://www.imsglobal.org/xsd/imscp_v1p1.xsd http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource http://www.imsglobal.org/profile/cc/ccv1p1/LOM/ccv1p1_lomresource_v1p0.xsd http://www.imsglobal.org/xsd/imsmd_v1p2 http://www.imsglobal.org/xsd/imsmd_v1p2p2.xsd">
+    <metadata>
+      <schema>IMS Content</schema>
+      <schemaversion>1.1.3</schemaversion>
+      <imsmd:lom>
+        <imsmd:general>
+          <imsmd:title>
+            <imsmd:string>QTI Quiz Export for course "TEM-CIS-156-JM"</imsmd:string>
+          </imsmd:title>
+        </imsmd:general>
+        <imsmd:lifeCycle>
+          <imsmd:contribute>
+            <imsmd:date>
+              <imsmd:dateTime>2020-12-25</imsmd:dateTime>
+            </imsmd:date>
+          </imsmd:contribute>
+        </imsmd:lifeCycle>
+        <imsmd:rights>
+          <imsmd:copyrightAndOtherRestrictions>
+            <imsmd:value>yes</imsmd:value>
+          </imsmd:copyrightAndOtherRestrictions>
+          <imsmd:description>
+            <imsmd:string>Private (Copyrighted) - http://en.wikipedia.org/wiki/Copyright</imsmd:string>
+          </imsmd:description>
+        </imsmd:rights>
+      </imsmd:lom>
+    </metadata>
+    <organizations/>
+    <resources>'''
+  for question in questions:
+    guid_append = question.gen_guid()
+    manifest += f'''<resource identifier="{question.guid}" type="imsqti_xmlv1p2">
+        <file href="{question.guid}/{question.guid}.xml"/>
+        <dependency identifierref="ge4d8d35e8e41f702d320795e0d{guid_append}"/>
+      </resource>
+      <resource identifier="ge4d8d35e8e41f702d320795e0d{guid_append}" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="{question.guid}/assessment_meta.xml">
+        <file href="{question.guid}/assessment_meta.xml"/>
+      </resource>'''
+      
+  manifest += '''</resources>
+  </manifest>
+  '''
+  return manifest
+def create_files(guid,complete_quiz_text,meta):
+
+  dir_path = 'g8ce2009aaab3283573f3ef0ef11cbb61'
+
+  # try:
+  #     shutil.rmtree(dir_path)
+  # except OSError as e:
+  #     print("Error: %s : %s" % (dir_path, e.strerror))
+  
+  os.mkdir(question.guid)
+  if not os.path.exists('non_cc_assessment'):
+    os.mkdir("non_cc_assessment")
+  
+  
+  myfile = open(f"{guid}/{guid}.xml","w")
+  myfile.write(complete_quiz_text)
+  myfile.close()
+
+  myfile = open(f"{guid}/assessment_meta.xml","w")
+  myfile.write(meta)
+  myfile.close()
+
+  
+  
+
+
+def cleanup():
+  my_dir = os.path.dirname(os.path.realpath(__file__))
+
+
+  for item in os.walk(my_dir):
+    if  item[0].find("g8ce2009") >= 0:
+      try:
+        shutil.rmtree(item[0])
+        print(item[0], "removed")
+      except OSError as e:
+        print("Error: %s : %s" % (dir_path, e.strerror))
 
 lines = my_file.readlines()
 # print(lines)
@@ -58,69 +142,13 @@ for part in parts:
   count+=1
 theQuiz = Quizzes(questions)
 
-#pprint(theQuiz.questions[0].answers)
 
-
-  
-
-
-# for line in parts:
-#   print(line,"\n")
-
-#build manifest
-manifest = f'''<?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="gc1c043c4d56096c5d62f1217d8a35bf3" xmlns="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1" xmlns:lom="http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_v1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1 http://www.imsglobal.org/xsd/imscp_v1p1.xsd http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource http://www.imsglobal.org/profile/cc/ccv1p1/LOM/ccv1p1_lomresource_v1p0.xsd http://www.imsglobal.org/xsd/imsmd_v1p2 http://www.imsglobal.org/xsd/imsmd_v1p2p2.xsd">
-  <metadata>
-    <schema>IMS Content</schema>
-    <schemaversion>1.1.3</schemaversion>
-    <imsmd:lom>
-      <imsmd:general>
-        <imsmd:title>
-          <imsmd:string>QTI Quiz Export for course "TEM-CIS-156-JM"</imsmd:string>
-        </imsmd:title>
-      </imsmd:general>
-      <imsmd:lifeCycle>
-        <imsmd:contribute>
-          <imsmd:date>
-            <imsmd:dateTime>2020-12-25</imsmd:dateTime>
-          </imsmd:date>
-        </imsmd:contribute>
-      </imsmd:lifeCycle>
-      <imsmd:rights>
-        <imsmd:copyrightAndOtherRestrictions>
-          <imsmd:value>yes</imsmd:value>
-        </imsmd:copyrightAndOtherRestrictions>
-        <imsmd:description>
-          <imsmd:string>Private (Copyrighted) - http://en.wikipedia.org/wiki/Copyright</imsmd:string>
-        </imsmd:description>
-      </imsmd:rights>
-    </imsmd:lom>
-  </metadata>
-  <organizations/>
-  <resources>'''
-for question in theQuiz.questions:
-  guid_append = question.gen_guid()
-  manifest += f'''<resource identifier="{question.guid}" type="imsqti_xmlv1p2">
-      <file href="{question.guid}/{question.guid}.xml"/>
-      <dependency identifierref="ge4d8d35e8e41f702d320795e0d{guid_append}"/>
-    </resource>
-    <resource identifier="ge4d8d35e8e41f702d320795e0d{guid_append}" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="{question.guid}/assessment_meta.xml">
-      <file href="{question.guid}/assessment_meta.xml"/>
-    </resource>'''
-    
-manifest += '''</resources>
-</manifest>
-'''
-os.mkdir("non_cc_assessment")
-myfile = open("imsmanifest.xml", "w")
-myfile.write(manifest)
-myfile.close()
-
-quizcounter = 0;
+#get rid of last job's files/folders
+cleanup()
 #now to output
 for question in theQuiz.questions:
   #print(theQuiz.questions[0].text)
-
+  
   start = f'''
   <?xml version="1.0" encoding="UTF-8"?>
   <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
@@ -164,10 +192,7 @@ for question in theQuiz.questions:
 
   for line in question.text:
     question_area += para(line)
-  # print("\n\n------------------------------\n\n")
-  # print(question_area)
-  # print("\n\n------------------------------\n\n")
-
+  
   answers_area = f'''&lt;/div&gt;
     </mattext></material>'''
   #print(question.answers)
@@ -226,89 +251,84 @@ for question in theQuiz.questions:
 
   '''
   
-
-  meta = f'''<?xml version="1.0" encoding="UTF-8"?>
-<quiz identifier="{question.guid}" xmlns="http://canvas.instructure.com/xsd/cccv1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://canvas.instructure.com/xsd/cccv1p0 https://canvas.instructure.com/xsd/cccv1p0.xsd">
-  <title>Chapter 1 - Exercise 1</title>
-  <description></description>
-  <shuffle_answers>true</shuffle_answers>
-  <scoring_policy>keep_highest</scoring_policy>
-  <hide_results></hide_results>
-  <quiz_type>assignment</quiz_type>
-  <points_possible>10.0</points_possible>
-  <require_lockdown_browser>false</require_lockdown_browser>
-  <require_lockdown_browser_for_results>false</require_lockdown_browser_for_results>
-  <require_lockdown_browser_monitor>false</require_lockdown_browser_monitor>
-  <lockdown_browser_monitor_data/>
-  <show_correct_answers>false</show_correct_answers>
-  <anonymous_submissions>false</anonymous_submissions>
-  <could_be_locked>true</could_be_locked>
-  <disable_timer_autosubmission>false</disable_timer_autosubmission>
-  <allowed_attempts>-1</allowed_attempts>
-  <one_question_at_a_time>false</one_question_at_a_time>
-  <cant_go_back>false</cant_go_back>
-  <available>true</available>
-  <one_time_results>false</one_time_results>
-  <show_correct_answers_last_attempt>false</show_correct_answers_last_attempt>
-  <only_visible_to_overrides>false</only_visible_to_overrides>
-  <module_locked>false</module_locked>
-  <assignment identifier="g19a942d0e6d2cd3b55e47ac97123a655">
+  
+  def create_meta(guid):
+    meta = f'''<?xml version="1.0" encoding="UTF-8"?>
+    <quiz identifier="{guid}" xmlns="http://canvas.instructure.com/xsd/cccv1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://canvas.instructure.com/xsd/cccv1p0 https://canvas.instructure.com/xsd/cccv1p0.xsd">
     <title>Chapter 1 - Exercise 1</title>
-    <due_at/>
-    <lock_at/>
-    <unlock_at/>
+    <description></description>
+    <shuffle_answers>true</shuffle_answers>
+    <scoring_policy>keep_highest</scoring_policy>
+    <hide_results></hide_results>
+    <quiz_type>assignment</quiz_type>
+    <points_possible>10.0</points_possible>
+    <require_lockdown_browser>false</require_lockdown_browser>
+    <require_lockdown_browser_for_results>false</require_lockdown_browser_for_results>
+    <require_lockdown_browser_monitor>false</require_lockdown_browser_monitor>
+    <lockdown_browser_monitor_data/>
+    <show_correct_answers>false</show_correct_answers>
+    <anonymous_submissions>false</anonymous_submissions>
+    <could_be_locked>true</could_be_locked>
+    <disable_timer_autosubmission>false</disable_timer_autosubmission>
+    <allowed_attempts>-1</allowed_attempts>
+    <one_question_at_a_time>false</one_question_at_a_time>
+    <cant_go_back>false</cant_go_back>
+    <available>true</available>
+    <one_time_results>false</one_time_results>
+    <show_correct_answers_last_attempt>false</show_correct_answers_last_attempt>
+    <only_visible_to_overrides>false</only_visible_to_overrides>
     <module_locked>false</module_locked>
-    <workflow_state>published</workflow_state>
+    <assignment identifier="g19a942d0e6d2cd3b55e47ac97123a655">
+      <title>Chapter 1 - Exercise 1</title>
+      <due_at/>
+      <lock_at/>
+      <unlock_at/>
+      <module_locked>false</module_locked>
+      <workflow_state>published</workflow_state>
+      <assignment_overrides>
+      </assignment_overrides>
+      <quiz_identifierref>{guid}</quiz_identifierref>
+      <allowed_extensions></allowed_extensions>
+      <has_group_category>false</has_group_category>
+      <points_possible>10.0</points_possible>
+      <grading_type>points</grading_type>
+      <all_day>false</all_day>
+      <submission_types>online_quiz</submission_types>
+      <position>1</position>
+      <turnitin_enabled>false</turnitin_enabled>
+      <vericite_enabled>false</vericite_enabled>
+      <peer_review_count>0</peer_review_count>
+      <peer_reviews>false</peer_reviews>
+      <automatic_peer_reviews>false</automatic_peer_reviews>
+      <anonymous_peer_reviews>false</anonymous_peer_reviews>
+      <grade_group_students_individually>false</grade_group_students_individually>
+      <freeze_on_copy>false</freeze_on_copy>
+      <omit_from_final_grade>false</omit_from_final_grade>
+      <intra_group_peer_reviews>false</intra_group_peer_reviews>
+      <only_visible_to_overrides>false</only_visible_to_overrides>
+      <post_to_sis>false</post_to_sis>
+      <moderated_grading>false</moderated_grading>
+      <grader_count>0</grader_count>
+      <grader_comments_visible_to_graders>true</grader_comments_visible_to_graders>
+      <anonymous_grading>false</anonymous_grading>
+      <graders_anonymous_to_graders>false</graders_anonymous_to_graders>
+      <grader_names_visible_to_final_grader>true</grader_names_visible_to_final_grader>
+      <anonymous_instructor_annotations>false</anonymous_instructor_annotations>
+      <post_policy>
+        <post_manually>false</post_manually>
+      </post_policy>
+    </assignment>
+    <assignment_group_identifierref>g74aee8be22838d8f9a91a74a5f1fa5f7</assignment_group_identifierref>
     <assignment_overrides>
     </assignment_overrides>
-    <quiz_identifierref>{question.guid}</quiz_identifierref>
-    <allowed_extensions></allowed_extensions>
-    <has_group_category>false</has_group_category>
-    <points_possible>10.0</points_possible>
-    <grading_type>points</grading_type>
-    <all_day>false</all_day>
-    <submission_types>online_quiz</submission_types>
-    <position>1</position>
-    <turnitin_enabled>false</turnitin_enabled>
-    <vericite_enabled>false</vericite_enabled>
-    <peer_review_count>0</peer_review_count>
-    <peer_reviews>false</peer_reviews>
-    <automatic_peer_reviews>false</automatic_peer_reviews>
-    <anonymous_peer_reviews>false</anonymous_peer_reviews>
-    <grade_group_students_individually>false</grade_group_students_individually>
-    <freeze_on_copy>false</freeze_on_copy>
-    <omit_from_final_grade>false</omit_from_final_grade>
-    <intra_group_peer_reviews>false</intra_group_peer_reviews>
-    <only_visible_to_overrides>false</only_visible_to_overrides>
-    <post_to_sis>false</post_to_sis>
-    <moderated_grading>false</moderated_grading>
-    <grader_count>0</grader_count>
-    <grader_comments_visible_to_graders>true</grader_comments_visible_to_graders>
-    <anonymous_grading>false</anonymous_grading>
-    <graders_anonymous_to_graders>false</graders_anonymous_to_graders>
-    <grader_names_visible_to_final_grader>true</grader_names_visible_to_final_grader>
-    <anonymous_instructor_annotations>false</anonymous_instructor_annotations>
-    <post_policy>
-      <post_manually>false</post_manually>
-    </post_policy>
-  </assignment>
-  <assignment_group_identifierref>g74aee8be22838d8f9a91a74a5f1fa5f7</assignment_group_identifierref>
-  <assignment_overrides>
-  </assignment_overrides>
-</quiz>'''
-  
-  #print(start,question_area,answers_area,outcomes_area,feedback_area)
+    </quiz>'''
+    return meta
+  meta = create_meta(question.guid)
+  complete_quiz_text = start+question_area+answers_area+outcomes_area+feedback_area
 
-  os.mkdir(question.guid)
-  
-  myfile = open(f"{question.guid}/{question.guid}.xml","w")
-  myfile.write(start+question_area+answers_area+outcomes_area+feedback_area)
-  myfile.close()
+  create_files(question.guid,complete_quiz_text,meta,)
 
-  myfile = open(f"{question.guid}/assessment_meta.xml","w")
-  myfile.write(meta)
-  myfile.close()
+myfile = open("imsmanifest.xml", "w")
+myfile.write(build_manifest(theQuiz.questions))
+myfile.close()
 
-
-
-  quizcounter += 1
