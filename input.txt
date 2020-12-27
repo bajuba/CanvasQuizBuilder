@@ -90,19 +90,11 @@ Chapter 2 Exercise 3
 ###
 03. Budget
 ###
-multiblank
+multiselect
 ###
 You’ve been asked to write a program that computes percentages for specific categories in a personal budget. The program should ask the user to enter estimated monthly expenditures for the following categories: Rent Payment, Food, Utilities, and All Other. Your program should add the amounts, display the total, and compute and display the percentage for each category. Dollar amounts should be displayed with two decimal places and percentages should be displayed with one decimal place.
 rent = [1]([2]("Enter monthly rent payment"));
-food = [3]([4]("Enter monthly food costs"));
-utilities = [5]([6]("Enter monthly utility costs"));
-other = [7]([8]("Enter any other expenditures"));
-total = rent + food + utilities + other;
-[9]("Your total monthly costs: $" + [10].[11]);
-[12]("You spend " + ([13]).[14] + "% on Rent");
-[15]("You spend " + ([16]).[17] + "% on Food");
-[18]("You spend " + ([19]).[20] + "% on Utilities");
-[21]("You spend " + ([22]).[23] + "% on Other");
+food = [3]([4]
 Expected Output:
 >>Your total monthly costs: $850.00
 >>You spend 47.1% on Rent
@@ -110,30 +102,9 @@ Expected Output:
 >>You spend 17.6% on Utilities
 >>You spend 11.8% on Other
 ###
-1~parseInt
-2~prompt
-3~parseInt
-4~prompt
-5~parseInt
-6~prompt
-7~parseInt
-8~prompt
-9~console.log
-10~total~(total)
-11~toFixed(2)
-12~console.log
-13~rent / total
-14~toFixed(1)
-15~console.log
-16~food / total
-17~toFixed(1)
-18~console.log
-19~utilities / total
-20~toFixed(1)
-21~console.log
-22~other / total
-23~toFixed(1)
+1~parseInt~prompter~parseInted
+2~prompt~a~b~c
+3~parseInt~b~f
+4~prompt~hi~bye
 ###
-Check out a working example of this program:
-Chapter 2 Exercise 2~https://repl.it/@jmunger/CIS-156-Exercise-2-3-yksle
 ######

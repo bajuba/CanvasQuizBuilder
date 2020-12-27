@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
+  <assessment ident="g8ce2009aaab3283573f3ef0ef1d9d085" title="Chapter 2 - Exercise 2">
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>cc_maxattempts</fieldlabel>
+        <fieldentry>unlimited</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    <section ident="root_section"><item ident="g55e6d962093946e0f770fe3ddd6ff961" title="02. Quarterly Sales">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>fill_in_multiple_blanks_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>120,121,122,123,124,125,126,127,128,129,130,131,132</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>g6e4260d49c837ae43ad2d7f28345ec03</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;
+            &lt;p&gt;You have the final sales figures for the four quarters in 2010 for Bennet’s Used Auto Sales, and you are to design a program that asks for the sales figures, computes the total sales for the year, and calculates and displays the average quarterly sales for the year.&lt;/p&gt;&lt;p&gt;quarter1 = [1]([2]("Enter sales for Quarter 1"));&lt;/p&gt;&lt;p&gt;quarter2 = [3]([4]("Enter sales for Quarter 2"));&lt;/p&gt;&lt;p&gt;quarter3 = [5]([6]("Enter sales for Quarter 3"));&lt;/p&gt;&lt;p&gt;quarter4 = [7]([8]("Enter sales for Quarter 4"));&lt;/p&gt;&lt;p&gt;total = quarter1 + quarter2 + quarter3 + quarter4;&lt;/p&gt;&lt;p&gt;average = [9]&lt;/p&gt;&lt;p&gt;[10]("Total sales for the year: " + [11]);&lt;/p&gt;&lt;p&gt;[12]("Average sales per quarter: " + [13]);&lt;/p&gt;
+&lt;/div&gt;</mattext>
+          </material>
+          
+  <response_lid ident="response_1">
+            <material>
+              <mattext>1</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="120">
+                <material>
+                  <mattext texttype="text/plain">parseInt</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+  <response_lid ident="response_2">
+            <material>
+              <mattext>2</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="121">
+                <material>
+                  <mattext texttype="text/plain">prompt</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+  <response_lid ident="response_3">
+            <material>
+              <mattext>3</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="122">
+                <material>
+                  <mattext texttype="text/plain">parseInt</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+  <response_lid ident="response_4">
+            <material>
+              <mattext>4</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="123">
+                <material>
+                  <mattext texttype="text/plain">prompt</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+  <response_lid ident="response_5">
+            <material>
+              <mattext>5</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="124">
+                <material>
+                  <mattext texttype="text/plain">parseInt</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+  <response_lid ident="response_6">
+            <material>
+              <mattext>6</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="125">
+                <material>
+                  <mattext texttype="text/plain">prompt</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+  <response_lid ident="response_7">
+            <material>
+              <mattext>7</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="126">
+                <material>
+                  <mattext texttype="text/plain">parseInt</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+  <response_lid ident="response_8">
+            <material>
+              <mattext>8</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="127">
+                <material>
+                  <mattext texttype="text/plain">prompt</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+  <response_lid ident="response_9">
+            <material>
+              <mattext>9</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="128">
+                <material>
+                  <mattext texttype="text/plain">total / 4;</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+  <response_lid ident="response_10">
+            <material>
+              <mattext>10</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="129">
+                <material>
+                  <mattext texttype="text/plain">console.log</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+  <response_lid ident="response_11">
+            <material>
+              <mattext>11</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="130">
+                <material>
+                  <mattext texttype="text/plain">total</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+  <response_lid ident="response_12">
+            <material>
+              <mattext>12</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="131">
+                <material>
+                  <mattext texttype="text/plain">console.log</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+  <response_lid ident="response_13">
+            <material>
+              <mattext>13</mattext>
+            </material>
+            <render_choice>
+              <response_label ident="132">
+                <material>
+                  <mattext texttype="text/plain">average</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+          
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes><respcondition>
+            <conditionvar>
+              <varequal respident="response_1">120</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition><respcondition>
+            <conditionvar>
+              <varequal respident="response_2">121</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition><respcondition>
+            <conditionvar>
+              <varequal respident="response_3">122</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition><respcondition>
+            <conditionvar>
+              <varequal respident="response_4">123</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition><respcondition>
+            <conditionvar>
+              <varequal respident="response_5">124</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition><respcondition>
+            <conditionvar>
+              <varequal respident="response_6">125</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition><respcondition>
+            <conditionvar>
+              <varequal respident="response_7">126</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition><respcondition>
+            <conditionvar>
+              <varequal respident="response_8">127</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition><respcondition>
+            <conditionvar>
+              <varequal respident="response_9">128</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition><respcondition>
+            <conditionvar>
+              <varequal respident="response_10">129</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition><respcondition>
+            <conditionvar>
+              <varequal respident="response_11">130</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition><respcondition>
+            <conditionvar>
+              <varequal respident="response_12">131</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition><respcondition>
+            <conditionvar>
+              <varequal respident="response_13">132</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
+          </respcondition>
+        </resprocessing>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>
