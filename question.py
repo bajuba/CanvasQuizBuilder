@@ -154,7 +154,7 @@ class Question:
     self.answers = self.get_answers(question["answers"])
     self.answer_ids = self.get_answer_ids()
     self.feedback = question["feedback"]
-    self.assign_point_weights()
+    self.assign_answer_properties()
 
   def get_answers(self, answers):
     answer_return = []
@@ -184,14 +184,16 @@ class Question:
     
     return ids[:-1]
 
-  def assign_point_weights(self):
+  def assign_answer_properties(self):
     for answer in self.answers:
+      answer.type = self.type
       answer.point_weight = 100 / len(self.answers)
 
 class Answer:
 
   def __init__(self, answer):
     self.text = answer[0]
+    self.type = ''
     self.choices = self.get_choices(answer[1:])
     self.correct_ident = self.choices[0].ident
     self.point_weight = 0

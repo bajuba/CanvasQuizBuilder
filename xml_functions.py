@@ -67,10 +67,13 @@ def question_section(question):
 def answer_section(answer):
   answer_return = f'''
   <response_lid ident="response_{answer.text}">
-            <material>
+            '''
+  if not answer.type == "multiple_choice_question": 
+    answer_return += f'''<material>
               <mattext>{answer.text}</mattext>
             </material>
-            <render_choice>'''
+            '''
+  answer_return += '''<render_choice>'''
   for choice in answer.choices:
     answer_return += f'''
               <response_label ident="{choice.ident}">
