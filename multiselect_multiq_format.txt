@@ -2,7 +2,7 @@ Chapter 2 - Exercise 1 (Quiz Title)
 ###
 01. Percent Difference (Question Title)
 ###
-multiselect (Type of question)
+multiselect
 ###
 What color is an orange?[1]
 What color is fresh snow?[2]
