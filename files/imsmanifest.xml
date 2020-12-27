@@ -28,26 +28,26 @@
   </metadata>
   <organizations/>
   <resources>
-    <resource identifier="g8ce2009aaab3283573f3ef0ef1e0850d" type="imsqti_xmlv1p2">
-    <file href="g8ce2009aaab3283573f3ef0ef1e0850d/g8ce2009aaab3283573f3ef0ef1e0850d.xml"/>
-    <dependency identifierref="ge4d8d35e8e41f702d320795e0d096470"/>
+    <resource identifier="g8ce2009aaab3283573f3ef0ef173fe87" type="imsqti_xmlv1p2">
+    <file href="g8ce2009aaab3283573f3ef0ef173fe87/g8ce2009aaab3283573f3ef0ef173fe87.xml"/>
+    <dependency identifierref="ge4d8d35e8e41f702d320795e0dce275b"/>
   </resource>
-  <resource identifier="ge4d8d35e8e41f702d320795e0d096470" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g8ce2009aaab3283573f3ef0ef1e0850d/assessment_meta.xml">
-    <file href="g8ce2009aaab3283573f3ef0ef1e0850d/assessment_meta.xml"/>
+  <resource identifier="ge4d8d35e8e41f702d320795e0dce275b" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g8ce2009aaab3283573f3ef0ef173fe87/assessment_meta.xml">
+    <file href="g8ce2009aaab3283573f3ef0ef173fe87/assessment_meta.xml"/>
   </resource>
-  <resource identifier="g8ce2009aaab3283573f3ef0ef1d9d085" type="imsqti_xmlv1p2">
-    <file href="g8ce2009aaab3283573f3ef0ef1d9d085/g8ce2009aaab3283573f3ef0ef1d9d085.xml"/>
-    <dependency identifierref="ge4d8d35e8e41f702d320795e0da72592"/>
+  <resource identifier="g8ce2009aaab3283573f3ef0ef17b4216" type="imsqti_xmlv1p2">
+    <file href="g8ce2009aaab3283573f3ef0ef17b4216/g8ce2009aaab3283573f3ef0ef17b4216.xml"/>
+    <dependency identifierref="ge4d8d35e8e41f702d320795e0d4192af"/>
   </resource>
-  <resource identifier="ge4d8d35e8e41f702d320795e0da72592" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g8ce2009aaab3283573f3ef0ef1d9d085/assessment_meta.xml">
-    <file href="g8ce2009aaab3283573f3ef0ef1d9d085/assessment_meta.xml"/>
+  <resource identifier="ge4d8d35e8e41f702d320795e0d4192af" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g8ce2009aaab3283573f3ef0ef17b4216/assessment_meta.xml">
+    <file href="g8ce2009aaab3283573f3ef0ef17b4216/assessment_meta.xml"/>
   </resource>
-  <resource identifier="g8ce2009aaab3283573f3ef0ef11be6a2" type="imsqti_xmlv1p2">
-    <file href="g8ce2009aaab3283573f3ef0ef11be6a2/g8ce2009aaab3283573f3ef0ef11be6a2.xml"/>
-    <dependency identifierref="ge4d8d35e8e41f702d320795e0daf0d43"/>
+  <resource identifier="g8ce2009aaab3283573f3ef0ef1b01ea3" type="imsqti_xmlv1p2">
+    <file href="g8ce2009aaab3283573f3ef0ef1b01ea3/g8ce2009aaab3283573f3ef0ef1b01ea3.xml"/>
+    <dependency identifierref="ge4d8d35e8e41f702d320795e0d239692"/>
   </resource>
-  <resource identifier="ge4d8d35e8e41f702d320795e0daf0d43" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g8ce2009aaab3283573f3ef0ef11be6a2/assessment_meta.xml">
-    <file href="g8ce2009aaab3283573f3ef0ef11be6a2/assessment_meta.xml"/>
+  <resource identifier="ge4d8d35e8e41f702d320795e0d239692" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g8ce2009aaab3283573f3ef0ef1b01ea3/assessment_meta.xml">
+    <file href="g8ce2009aaab3283573f3ef0ef1b01ea3/assessment_meta.xml"/>
   </resource>
   </resources>
 </manifest>

@@ -22,7 +22,7 @@ def question_section(question):
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>points_possible</fieldlabel>
-              <fieldentry>1.0</fieldentry>
+              <fieldentry>{question.points}</fieldentry>
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>original_answer_ids</fieldlabel>
@@ -57,8 +57,9 @@ def question_section(question):
   for answer in question.answers:
     question_return += outcome_section(answer)
   
-  question_return += '''
+  question_return += f'''
         </resprocessing>
+        {feedback_section(question)}
       </item>'''
 
   return question_return
@@ -90,6 +91,25 @@ def outcome_section(answer):
             </conditionvar>
             <setvar varname="SCORE" action="Add">{answer.point_weight}</setvar>
           </respcondition>'''
+
+def feedback_section(question):
+  feedback_return = f'''<itemfeedback ident="correct_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">
+              '''
+  for feedback_line in question.feedback:
+    if "~" in feedback_line:
+      feedback_return += para(build_link(feedback_line))
+    else:
+      feedback_return += para(feedback_line)
+
+  feedback_return += '''
+              </mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>'''
+  return feedback_return
 
 def end_section():
   return '''
@@ -218,3 +238,7 @@ def manifest_file(quizzes):
 
 def para(text):
   return f"&lt;p&gt;{text}&lt;/p&gt;"
+
+def build_link(feedback_line):
+  link = feedback_line.split("~")
+  return f'''&lt;a class="instructure_file_link inline_disabled external" href="{link[1]}" target="_blank"&gt;&lt;span&gt;{link[0]}&lt;/span&gt;&lt;span class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."&gt;&lt;span class="screenreader-only"&gt;Links to an external site.&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;'''

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
-  <assessment ident="g8ce2009aaab3283573f3ef0ef1e0850d" title="Chapter 2 - Exercise 1">
+  <assessment ident="g8ce2009aaab3283573f3ef0ef173fe87" title="Chapter 2 - Exercise 1">
     <qtimetadata>
       <qtimetadatafield>
         <fieldlabel>cc_maxattempts</fieldlabel>
         <fieldentry>unlimited</fieldentry>
       </qtimetadatafield>
     </qtimetadata>
-    <section ident="root_section"><item ident="g55e6d962093946e0f770fe3ddd6ff855" title="01. Percent Difference">
+    <section ident="root_section"><item ident="g55e6d962093946e0f770fe3ddd6ff194" title="01. Percent Difference">
         <itemmetadata>
           <qtimetadata>
             <qtimetadatafield>
@@ -16,7 +16,7 @@
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>points_possible</fieldlabel>
-              <fieldentry>1.0</fieldentry>
+              <fieldentry>20</fieldentry>
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>original_answer_ids</fieldlabel>
@@ -208,7 +208,16 @@
             <setvar varname="SCORE" action="Add">11.11111111111111</setvar>
           </respcondition>
         </resprocessing>
-      </item><item ident="g55e6d962093946e0f770fe3ddd6ff264" title="02. Percent Difference">
+        <itemfeedback ident="correct_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">
+              &lt;p&gt;Check out a working example of this program:&lt;/p&gt;&lt;p&gt;&lt;a class="instructure_file_link inline_disabled external" href="https://repl.it/@jmunger/CIS-156-Exercise-2-1-juwslk" target="_blank"&gt;&lt;span&gt;Chapter 2 Exercise 1&lt;/span&gt;&lt;span class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."&gt;&lt;span class="screenreader-only"&gt;Links to an external site.&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+              </mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item><item ident="g55e6d962093946e0f770fe3ddd6ff462" title="02. Percent Difference">
         <itemmetadata>
           <qtimetadata>
             <qtimetadatafield>
@@ -217,7 +226,7 @@
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>points_possible</fieldlabel>
-              <fieldentry>1.0</fieldentry>
+              <fieldentry>20</fieldentry>
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>original_answer_ids</fieldlabel>
@@ -409,6 +418,15 @@
             <setvar varname="SCORE" action="Add">11.11111111111111</setvar>
           </respcondition>
         </resprocessing>
+        <itemfeedback ident="correct_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">
+              &lt;p&gt;Check out a working example of this program:&lt;/p&gt;&lt;p&gt;&lt;a class="instructure_file_link inline_disabled external" href="https://repl.it/@jmunger/CIS-156-Exercise-2-1-juwslk" target="_blank"&gt;&lt;span&gt;Chapter 2 Exercise 1&lt;/span&gt;&lt;span class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."&gt;&lt;span class="screenreader-only"&gt;Links to an external site.&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+              </mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
       </item>
     </section>
   </assessment>

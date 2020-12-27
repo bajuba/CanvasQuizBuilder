@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<quiz identifier="g8ce2009aaab3283573f3ef0ef1e0850d" xmlns="http://canvas.instructure.com/xsd/cccv1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://canvas.instructure.com/xsd/cccv1p0 https://canvas.instructure.com/xsd/cccv1p0.xsd">
-  <title>Chapter 2 - Exercise 1</title>
+<quiz identifier="g8ce2009aaab3283573f3ef0ef17b4216" xmlns="http://canvas.instructure.com/xsd/cccv1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://canvas.instructure.com/xsd/cccv1p0 https://canvas.instructure.com/xsd/cccv1p0.xsd">
+  <title>Chapter 2 - Exercise 2</title>
   <description></description>
   <shuffle_answers>true</shuffle_answers>
   <scoring_policy>keep_highest</scoring_policy>
@@ -24,7 +24,7 @@
   <only_visible_to_overrides>false</only_visible_to_overrides>
   <module_locked>false</module_locked>
   <assignment identifier="ged4093de460a387ad77fa62525ae18ee">
-    <title>Chapter 2 - Exercise 1</title>
+    <title>Chapter 2 - Exercise 2</title>
     <due_at/>
     <lock_at/>
     <unlock_at/>

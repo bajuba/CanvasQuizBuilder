@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
-  <assessment ident="g8ce2009aaab3283573f3ef0ef1d9d085" title="Chapter 2 - Exercise 2">
+  <assessment ident="g8ce2009aaab3283573f3ef0ef17b4216" title="Chapter 2 - Exercise 2">
     <qtimetadata>
       <qtimetadatafield>
         <fieldlabel>cc_maxattempts</fieldlabel>
         <fieldentry>unlimited</fieldentry>
       </qtimetadatafield>
     </qtimetadata>
-    <section ident="root_section"><item ident="g55e6d962093946e0f770fe3ddd6ff961" title="02. Quarterly Sales">
+    <section ident="root_section"><item ident="g55e6d962093946e0f770fe3ddd6ff774" title="02. Quarterly Sales">
         <itemmetadata>
           <qtimetadata>
             <qtimetadatafield>
@@ -16,7 +16,7 @@
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>points_possible</fieldlabel>
-              <fieldentry>1.0</fieldentry>
+              <fieldentry>20</fieldentry>
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>original_answer_ids</fieldlabel>
@@ -275,6 +275,15 @@
             <setvar varname="SCORE" action="Add">7.6923076923076925</setvar>
           </respcondition>
         </resprocessing>
+        <itemfeedback ident="correct_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">
+              &lt;p&gt;Check out a working example of this program:&lt;/p&gt;&lt;p&gt;Chapter 2 Exercise 2&lt;/p&gt;&lt;p&gt;https://repl.it/@jmunger/CIS-156-Exercise-2-2-wksle&lt;/p&gt;
+              </mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
       </item>
     </section>
   </assessment>

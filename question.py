@@ -367,6 +367,7 @@ class Question:
   def __init__(self, question):
     self.title = question["title"]
     self.text = question["text"]
+    self.points = 0
     self.type = self.get_type(question["type"])
     self.answers = self.get_answers(question["answers"])
     self.answer_ids = self.get_answer_ids()
@@ -382,8 +383,10 @@ class Question:
 
   def get_type(self, question_type):
     if question_type == 'multiblank':
+      self.points = 20
       return 'fill_in_multiple_blanks_question'
     elif question_type == 'multiselect':
+      self.points = 13
       return 'multiple_dropdowns_question'
     
     return ''
