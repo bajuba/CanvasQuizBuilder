@@ -2,7 +2,7 @@ Chapter 2 - Exercise 1
 ###
 01. Percent Difference
 ###
-multiblank
+multiblank~20
 ###
 You have been asked to design a program for calculating the percentage increase or decrease of the market value of the Connors Building from January 2010 to January 2011. The program should ask the user for the January 2010 price and the January 2011 price, compute the difference, and then calculate and display the percentage increase or decrease over the January 2010 price.
 priceIn2010 = [1]([2]("What was the price in 2010?"));
@@ -28,7 +28,7 @@ Chapter 2 Exercise 1~https://repl.it/@jmunger/CIS-156-Exercise-2-1-juwslk
 ###
 02. Percent Difference
 ###
-multiblank
+multiblank~15
 ###
 You have been asked to design a program for calculating the percentage increase or decrease of the market value of the Connors Building from January 2010 to January 2011. The program should ask the user for the January 2010 price and the January 2011 price, compute the difference, and then calculate and display the percentage increase or decrease over the January 2010 price.
 priceIn2010 = [1]([2]("What was the price in 2010?"));
@@ -56,7 +56,7 @@ Chapter 2 - Exercise 2
 ###
 02. Quarterly Sales
 ###
-multiblank
+multiblank~5
 ###
 You have the final sales figures for the four quarters in 2010 for Bennet’s Used Auto Sales, and you are to design a program that asks for the sales figures, computes the total sales for the year, and calculates and displays the average quarterly sales for the year.
 quarter1 = [1]([2]("Enter sales for Quarter 1"));
@@ -90,7 +90,7 @@ Chapter 2 Exercise 3
 ###
 03. Budget
 ###
-multiselect
+multiselect~18
 ###
 You’ve been asked to write a program that computes percentages for specific categories in a personal budget. The program should ask the user to enter estimated monthly expenditures for the following categories: Rent Payment, Food, Utilities, and All Other. Your program should add the amounts, display the total, and compute and display the percentage for each category. Dollar amounts should be displayed with two decimal places and percentages should be displayed with one decimal place.
 rent = [1]([2]("Enter monthly rent payment"));

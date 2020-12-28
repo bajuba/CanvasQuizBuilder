@@ -2,7 +2,7 @@ Chapter 2 - Exercise 1 (Quiz Title)
 ###
 01. Percent Difference (Question Title)
 ###
-multiselect
+multiselect~3
 ###
 What color is an orange?[1]
 What color is fresh snow?[2]
@@ -15,7 +15,7 @@ Add your feedback here
 ###
 02. Percent Difference (Question Title)
 ###
-multiselect (Type of question)
+multiselect~3
 ###
 What color is an orange?[1]
 What color is fresh snow?[2]
@@ -28,7 +28,7 @@ Add your feedback here
 ###
 03. Percent Difference (Question Title)
 ###
-multiselect (Type of question)
+multiselect~3
 ###
 What color is an orange?[1]
 What color is fresh snow?[2]
@@ -43,7 +43,7 @@ Chapter 2 - Exercise 1 (Quiz Title)
 ###
 01. Percent Difference (Question Title)
 ###
-multiselect (Type of question)
+multiselect~2
 ###
 What color is an orange?[1]
 What color is fresh snow?[2]
@@ -56,7 +56,7 @@ Add your feedback here
 ###
 02. Percent Difference (Question Title)
 ###
-multiselect (Type of question)
+multiselect~4
 ###
 What color is an orange?[1]
 What color is fresh snow?[2]
@@ -69,7 +69,7 @@ Add your feedback here
 ###
 03. Percent Difference (Question Title)
 ###
-multiselect (Type of question)
+multiselect~2
 ###
 What color is an orange?[1]
 What color is fresh snow?[2]

@@ -149,8 +149,9 @@ class Question:
   def __init__(self, question):
     self.title = question["title"]
     self.text = question["text"]
-    self.points = 0
-    self.type = self.get_type(question["type"])
+    qtype = question["type"].split("~")
+    self.points = qtype[1] if len(qtype) > 1 else 0
+    self.type = self.get_type(qtype[0])
     self.answers = self.get_answers(question["answers"])
     self.answer_ids = self.get_answer_ids()
     self.feedback = question["feedback"]
@@ -165,13 +166,13 @@ class Question:
 
   def get_type(self, question_type):
     if question_type == 'multiblank':
-      self.points = 20
+      # self.points = 20
       return 'fill_in_multiple_blanks_question'
     elif question_type == 'multiselect':
-      self.points = 1
+      # self.points = 1
       return 'multiple_dropdowns_question'
     elif question_type == 'multichoice':
-      self.points = 5
+      # self.points = 5
       return 'multiple_choice_question'
     
     return ''
