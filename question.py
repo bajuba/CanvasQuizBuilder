@@ -61,11 +61,11 @@ class Quizzes:
           if count == 2:
             question["type"] = line
           if count == 3:
-            question["text"].append(line)
+            question["text"].append(self.safe_string(line))
           if count == 4:
-            question["answers"].append(line)
+            question["answers"].append(self.safe_string(line))
           if count == 5:
-            question["feedback"].append(line)
+            question["feedback"].append(self.safe_string(line))
 
     for quiz in quizzes:
       self.quizzes.append(Quiz(quiz))
@@ -118,6 +118,18 @@ class Quizzes:
           print(item[0], "removed")
         except OSError as e:
           print("Error: %s : %s" % (dir_path, e.strerror))
+  
+  def safe_string(self, string):
+    string_return = ''
+    for ch in string:
+      if ch == '<':
+        string_return += '&lt;'
+      elif ch == '>':
+        string_return += '&gt;'
+      else:
+        string_return += ch
+
+    return string_return
 
 class Quiz:
   identifier = 'g8ce2009aaab3283573f3ef0ef1'
