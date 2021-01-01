@@ -6,6 +6,7 @@ Each quiz in the file must be followed by six pound symbols (&#35;&#35;&#35;&#35
 The sections are as follows:
 
 Quiz Title<br/>
+Quiz Options<br/>
 &#35;&#35;&#35;<br/>
 Question Title<br/>
 &#35;&#35;&#35;<br/>
@@ -17,6 +18,26 @@ Answers<br/>
 &#35;&#35;&#35;<br/>
 Question Correct Feedback<br/>
 &#35;&#35;&#35;&#35;&#35;&#35;<br/>
+
+## Quiz Options:
+Quiz options are placed directly under the quiz title. Each option must be on a separate line with the option name, a tilde(~) separator, and then the option value.<br/><br/>
+<b>Default Option Values</b><br/>
+The following are the default values for all changeable quiz options. Any option omitted from the options section in the input file will receive these default values:<br/>
+description : ""<br/>
+shuffle : true<br/>
+scoring : keep_highest<br/>
+type : assignment<br/>
+lockdown : false<br/>
+show_correct : false<br/>
+anonymous : false<br/>
+attempts : -1<br/>
+one_question : false<br/>
+cant_go_back : false<br/>
+available : true<br/>
+one_time_results : false<br/>
+show_correct_last : false<br/>
+only_visible_to_overrides : false<br/>
+module_locked : false<br/>
 
 ## Possible Types:
 multiblank = multiple fill in the blank question<br/>
@@ -44,6 +65,9 @@ link text~link address<br/>
 ## Example Quiz with all questions represented:
 <pre>
 Test Quiz
+description~Complete the following exercises
+shuffle~false
+lockdown~true
 &#35;&#35;&#35;
 01. Question 1
 &#35;&#35;&#35;

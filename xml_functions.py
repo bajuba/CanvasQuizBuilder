@@ -124,28 +124,28 @@ def assessment_file(quiz):
   return f'''<?xml version="1.0" encoding="UTF-8"?>
 <quiz identifier="{quiz.guid}" xmlns="http://canvas.instructure.com/xsd/cccv1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://canvas.instructure.com/xsd/cccv1p0 https://canvas.instructure.com/xsd/cccv1p0.xsd">
   <title>{quiz.title}</title>
-  <description></description>
-  <shuffle_answers>true</shuffle_answers>
-  <scoring_policy>keep_highest</scoring_policy>
+  <description>{quiz.options["description"]}</description>
+  <shuffle_answers>{quiz.options["shuffle"]}</shuffle_answers>
+  <scoring_policy>{quiz.options["scoring"]}</scoring_policy>
   <hide_results></hide_results>
-  <quiz_type>assignment</quiz_type>
+  <quiz_type>{quiz.options["type"]}</quiz_type>
   <points_possible>20.0</points_possible>
-  <require_lockdown_browser>false</require_lockdown_browser>
+  <require_lockdown_browser>{quiz.options["lockdown"]}</require_lockdown_browser>
   <require_lockdown_browser_for_results>false</require_lockdown_browser_for_results>
   <require_lockdown_browser_monitor>false</require_lockdown_browser_monitor>
   <lockdown_browser_monitor_data/>
-  <show_correct_answers>false</show_correct_answers>
-  <anonymous_submissions>false</anonymous_submissions>
+  <show_correct_answers>{quiz.options["show_correct"]}</show_correct_answers>
+  <anonymous_submissions>{quiz.options["anonymous"]}</anonymous_submissions>
   <could_be_locked>true</could_be_locked>
   <disable_timer_autosubmission>false</disable_timer_autosubmission>
-  <allowed_attempts>-1</allowed_attempts>
-  <one_question_at_a_time>false</one_question_at_a_time>
-  <cant_go_back>false</cant_go_back>
-  <available>true</available>
-  <one_time_results>false</one_time_results>
-  <show_correct_answers_last_attempt>false</show_correct_answers_last_attempt>
-  <only_visible_to_overrides>false</only_visible_to_overrides>
-  <module_locked>false</module_locked>
+  <allowed_attempts>{quiz.options["attempts"]}</allowed_attempts>
+  <one_question_at_a_time>{quiz.options["one_question"]}</one_question_at_a_time>
+  <cant_go_back>{quiz.options["cant_go_back"]}</cant_go_back>
+  <available>{quiz.options["available"]}</available>
+  <one_time_results>{quiz.options["one_time_results"]}</one_time_results>
+  <show_correct_answers_last_attempt>{quiz.options["show_correct_last"]}</show_correct_answers_last_attempt>
+  <only_visible_to_overrides>{quiz.options["only_visible_to_overrides"]}</only_visible_to_overrides>
+  <module_locked>{quiz.options["module_locked"]}</module_locked>
   <assignment identifier="ged4093de460a387ad77fa62525ae18ee">
     <title>{quiz.title}</title>
     <due_at/>

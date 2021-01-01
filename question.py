@@ -23,6 +23,7 @@ class Quizzes:
     quiz = {}
     question = {}
     quiz["questions"] = []
+    quiz["options"] = []
     question['text'] = []
     question['answers'] = []
     question["feedback"] = []
@@ -41,6 +42,7 @@ class Quizzes:
         quizzes.append(quiz)
         quiz = {}
         quiz["questions"] = []
+        quiz["options"] = []
       elif line == "###":
         if count == 5:
           quiz["questions"].append(question)
@@ -54,21 +56,21 @@ class Quizzes:
         count += 1
       else:
         if count == 0:
-          quiz["title"] = line
-        else:
-          if count == 1:
-            question["title"] = line
-          if count == 2:
-            question["type"] = line
-          if count == 3:
-            question["text"].append(self.safe_string(line))
-          if count == 4:
-            question["answers"].append(self.safe_string(line))
-          if count == 5:
-            question["feedback"].append(self.safe_string(line))
+          quiz["options"].append(line)
+        if count == 1:
+          question["title"] = line
+        if count == 2:
+          question["type"] = line
+        if count == 3:
+          question["text"].append(self.safe_string(line))
+        if count == 4:
+          question["answers"].append(self.safe_string(line))
+        if count == 5:
+          question["feedback"].append(self.safe_string(line))
 
     for quiz in quizzes:
-      self.quizzes.append(Quiz(quiz))
+      new_quiz = Quiz(quiz)
+      self.quizzes.append(new_quiz)
 
     self.create_files()
 
@@ -136,7 +138,8 @@ class Quiz:
 
   def __init__(self, quiz):
     self.guid = Quiz.identifier + self.gen_guid()
-    self.title = quiz["title"]
+    self.title = quiz["options"][0]
+    self.options = self.get_options(quiz["options"][1:] if len(quiz["options"]) > 1 else [])
     self.questions = self.get_questions(quiz)
 
   def get_questions(self, quiz):
@@ -146,6 +149,31 @@ class Quiz:
     
     return questions
 
+  def get_options(self, options):
+    options_return = {
+      "description":"",
+      "shuffle":"true",
+      "scoring":"keep_highest",
+      "type":"assignment",
+      "lockdown":"false",
+      "show_correct":"false",
+      "anonymous":"false",
+      "attempts":"-1",
+      "one_question":"false",
+      "cant_go_back":"false",
+      "available":"true",
+      "one_time_results":"false",
+      "show_correct_last":"false",
+      "only_visible_to_overrides":"false",
+      "module_locked":"false"
+    }
+    for option in options:
+      split_option = option.split("~")
+      if split_option[0] in options_return.keys():
+        options_return[split_option[0]] = split_option[1]
+    
+    return options_return
+    
   def gen_guid(self):
     guid = ""
     for i in range(0,6):
