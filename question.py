@@ -62,11 +62,11 @@ class Quizzes:
         if count == 2:
           question["type"] = line
         if count == 3:
-          question["text"].append(self.safe_string(line))
+          question["text"].append(line)
         if count == 4:
-          question["answers"].append(self.safe_string(line))
+          question["answers"].append(line)
         if count == 5:
-          question["feedback"].append(self.safe_string(line))
+          question["feedback"].append(line)
 
     for quiz in quizzes:
       new_quiz = Quiz(quiz)
@@ -120,18 +120,6 @@ class Quizzes:
           print(item[0], "removed")
         except OSError as e:
           print("Error: %s : %s" % (dir_path, e.strerror))
-  
-  def safe_string(self, string):
-    string_return = ''
-    for ch in string:
-      if ch == '<':
-        string_return += '&lt;'
-      elif ch == '>':
-        string_return += '&gt;'
-      else:
-        string_return += ch
-
-    return string_return
 
 class Quiz:
   identifier = 'g8ce2009aaab3283573f3ef0ef1'
@@ -192,22 +180,66 @@ class Quiz:
 class Question:
   def __init__(self, question):
     self.title = question["title"]
-    self.text = question["text"]
+    self.text = self.get_text(question["text"])
     qtype = question["type"].split("~")
     self.points = qtype[1] if len(qtype) > 1 else 0
     self.type = self.get_type(qtype[0])
     self.answers = self.get_answers(question["answers"])
     self.answer_ids = self.get_answer_ids()
-    self.feedback = question["feedback"]
+    self.feedback = self.get_feedback(question["feedback"])
     self.assign_answer_properties()
 
   def get_answers(self, answers):
     answer_return = []
     for answer in answers:
-      answer_return.append(Answer(answer.split("~")))
+      safe_answer = self.safe_string(answer)
+      answer_return.append(Answer(safe_answer.split("~")))
     
     return answer_return
+  
+  def get_text(self, text):
+    text_return = []
+    escape = False
+    for line in text:
+      if line == "|":
+        escape = not escape
+        continue
+      if escape:
+        text_return.append(self.escape_html(line))
+      else:
+        text_return.append(self.safe_string(line))
+    
+    return text_return
 
+  def get_feedback(self, feedback):
+    feedback_return = []
+    for line in feedback:
+      feedback_return.append(self.safe_string(line))
+
+    return feedback_return
+
+  def escape_html(self, line):
+    escape_return = ""
+    for char in line:
+      if char == "<":
+        escape_return += "&amp;lt;"
+      else:
+        escape_return += char
+    
+    return escape_return
+
+  def safe_string(self, string):
+    string_return = ''
+    for ch in string:
+      if ch == '<':
+        string_return += '&lt;'
+      elif ch == '>':
+        string_return += '&gt;'
+      else:
+        string_return += ch
+
+    return string_return
+  
   def get_type(self, question_type):
     if question_type == 'multiblank':
       # self.points = 20

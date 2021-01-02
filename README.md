@@ -44,6 +44,16 @@ multiblank = multiple fill in the blank question<br/>
 multiselect = multiple dropdown question<br/>
 multichoice = multiple choice question<br/>
 
+## Question Text:
+You can use html directly in your question text. If you need to show the html code within the question you can use a pipe(|) on its own line before and after an area that html should be shown rather than executed<br/>
+Example:<br/>
+|
+&lt;p style="size:large">This will show as html code in the question text&lt;/p>
+|
+The same text without the pipes will show as:
+<p style="size:large">This will show as html code in the question text</p>
+
+
 ## Answers:
 Answers are in the following format:<br/>
 identifier&#126;answer1&#126;answer2&#126;answer3&#126;etc...
@@ -65,7 +75,7 @@ link text~link address<br/>
 ## Example Quiz with all questions represented:
 <pre>
 Test Quiz
-description~Complete the following exercises
+description~Description Line 1~Line 2~Line 3~Line ...~Line n
 shuffle~false
 lockdown~true
 &#35;&#35;&#35;
