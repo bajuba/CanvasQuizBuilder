@@ -47,11 +47,11 @@ multichoice = multiple choice question<br/>
 ## Question Text:
 You can use html directly in your question text. If you need to show the html code within the question you can use a pipe(|) on its own line before and after an area that html should be shown rather than executed<br/>
 Example:<br/>
-|
-&lt;p style="size:large">This will show as html code in the question text&lt;/p>
-|
-The same text without the pipes will show as:
-<p style="size:large">This will show as html code in the question text</p>
+|<br/>
+&lt;p style="font-size:large">This will show as html code in the question text&lt;/p><br/>
+|<br/>
+The same text without the pipes will show as:<br/>
+<p style="font-size:large">This will show as html code in the question text</p>
 
 
 ## Answers:
