@@ -121,10 +121,13 @@ def end_section():
 </questestinterop>'''
 
 def assessment_file(quiz):
-  return f'''<?xml version="1.0" encoding="UTF-8"?>
+  assessment_return = f'''<?xml version="1.0" encoding="UTF-8"?>
 <quiz identifier="{quiz.guid}" xmlns="http://canvas.instructure.com/xsd/cccv1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://canvas.instructure.com/xsd/cccv1p0 https://canvas.instructure.com/xsd/cccv1p0.xsd">
   <title>{quiz.title}</title>
-  <description>{quiz.options["description"]}</description>
+  <description>'''
+  for line in quiz.options["description"]:
+    assessment_return += para(line)
+  assessment_return += f'''</description>
   <shuffle_answers>{quiz.options["shuffle"]}</shuffle_answers>
   <scoring_policy>{quiz.options["scoring"]}</scoring_policy>
   <hide_results></hide_results>
@@ -191,6 +194,8 @@ def assessment_file(quiz):
   </assignment_overrides>
 </quiz>
 '''
+
+  return assessment_return
 
 def manifest_file(quizzes):
   manifest_return = f'''<?xml version="1.0" encoding="UTF-8"?>

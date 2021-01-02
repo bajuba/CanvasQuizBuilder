@@ -151,7 +151,7 @@ class Quiz:
 
   def get_options(self, options):
     options_return = {
-      "description":"",
+      "description":[],
       "shuffle":"true",
       "scoring":"keep_highest",
       "type":"assignment",
@@ -169,6 +169,10 @@ class Quiz:
     }
     for option in options:
       split_option = option.split("~")
+      if split_option[0] == "description":
+        for i in range(1, len(split_option)):
+          options_return["description"].append(split_option[i])
+        continue
       if split_option[0] in options_return.keys():
         options_return[split_option[0]] = split_option[1]
     
