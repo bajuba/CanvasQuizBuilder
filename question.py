@@ -6,10 +6,7 @@ class Quizzes:
   
   def __init__(self,filepath ):
     self.quizzes = []
-    # self.questions = self.import_file(filepath)
     self.import_file(filepath)
-    # self.idents = self.get_idents()
-
 
   def import_file(self,filepath):
     my_file = open(filepath,"r")
@@ -17,7 +14,7 @@ class Quizzes:
     lines = my_file.readlines()
     stripped_lines = []
     for line in lines:
-      stripped_lines.append(line.strip())
+      stripped_lines.append(line[:-1])
 
     quizzes = []
     quiz = {}
@@ -29,7 +26,6 @@ class Quizzes:
     question["feedback"] = []
     count = 0
     for line in stripped_lines:
-      
       if line == "######":
         if count == 5:
           quiz["questions"].append(question)
@@ -67,7 +63,6 @@ class Quizzes:
           question["answers"].append(line)
         if count == 5:
           question["feedback"].append(line)
-
     for quiz in quizzes:
       new_quiz = Quiz(quiz)
       self.quizzes.append(new_quiz)
@@ -128,6 +123,7 @@ class Quizzes:
 
 class Quiz:
   identifier = 'g8ce2009aaab3283573f3ef0ef1'
+  ident_counter = 0
 
   def __init__(self, quiz):
     self.guid = Quiz.identifier + self.gen_guid()
@@ -172,15 +168,12 @@ class Quiz:
     return options_return
     
   def gen_guid(self):
+    Quiz.ident_counter += 1
+    start = len(str(Quiz.ident_counter))
     guid = ""
-    for i in range(0,6):
-      num = randint(0,15)
-      if(num <= 9):
-        num += 48
-      else:
-        num += 87
-      guid += chr(num)
-    return guid
+    for i in range(start, 6):
+      guid += "0"
+    return guid + str(Quiz.ident_counter)
 
 class Question:
   def __init__(self, question):
@@ -218,19 +211,10 @@ class Question:
 
     return feedback_return
 
-  def escape_html(self, line):
-    escape_return = ""
-    for char in line:
-      if char == "<":
-        escape_return += "&amp;lt;"
-      else:
-        escape_return += char
-    
-    return escape_return
-
   def safe_string(self, string, escape=False):
     string_return = ''
     replace_char = ''
+    space_count = 0
     for ch in string:
       if ch == "|":
         escape = not escape
@@ -239,22 +223,29 @@ class Question:
       else:
         replace_char = '&lt;'
 
+      if ch == " ":
+        space_count += 1
+      else:
+        space_count = 0
+
       if ch == '<':
         string_return += replace_char
       elif ch != '|':
-        string_return += ch
+        if space_count == 4:
+          string_return = string_return[:-3]
+          string_return += ("&amp;nbsp;" * 4)
+          space_count = 0
+        else:
+          string_return += ch
 
     return [string_return, escape]
-  
+
   def get_type(self, question_type):
     if question_type == 'multiblank':
-      # self.points = 20
       return 'fill_in_multiple_blanks_question'
     elif question_type == 'multiselect':
-      # self.points = 1
       return 'multiple_dropdowns_question'
     elif question_type == 'multichoice':
-      # self.points = 5
       return 'multiple_choice_question'
     
     return ''

@@ -36,10 +36,9 @@ def question_section(question):
         </itemmetadata>
         <presentation>
           <material>
-            <mattext texttype="text/html">&lt;div&gt;
-            '''
+            <mattext texttype="text/html">&lt;div&gt;\n'''
   for text in question.text:
-    question_return += para(text)
+    question_return += f"{para(text)}\n"
 
   question_return +='''
 &lt;/div&gt;</mattext>
