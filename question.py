@@ -14,7 +14,10 @@ class Quizzes:
     lines = my_file.readlines()
     stripped_lines = []
     for line in lines:
-      stripped_lines.append(line[:-1])
+      if "\n" in line:
+        stripped_lines.append(line[:-1])
+      else:
+        stripped_lines.append(line)
 
     quizzes = []
     quiz = {}
