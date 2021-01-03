@@ -45,13 +45,11 @@ multiselect = multiple dropdown question<br/>
 multichoice = multiple choice question<br/>
 
 ## Question Text:
-You can use html directly in your question text. If you need to show the html code within the question you can use a pipe(|) on its own line before and after an area that html should be shown rather than executed<br/>
+You can use html directly in your question text. If you need to show the html code within the question you can use pipes(|) before and after an area that html should be shown rather than executed<br/>
 Example:<br/>
-|<br/>
-&lt;p style="color:red">This will show as html code in the question text&lt;/p><br/>
-|<br/>
+|&lt;p style="color:red;">This will show as html code in the question text&lt;/p>|<br/>
 The same text without the pipes will show as:<br/>
-<p style="color:red">This will show as html code in the question text</p>
+<p style="color:red;">This will show as html code in the question text</p>
 
 
 ## Answers:

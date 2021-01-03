@@ -86,9 +86,11 @@ class Quizzes:
     #   os.mkdir("files/non_cc_assessment")
 
     #Create and fill the manifest file
+    mydir = os.path.dirname(os.path.realpath(__file__))
     myfile = open("files/imsmanifest.xml", "w")
     myfile.write(manifest_file(self.quizzes))
     myfile.close()
+    print(f"{mydir}\\files\\imsmanifest.xml created")
 
     for quiz in self.quizzes:
       # Create the folder to hold the quiz files
@@ -101,17 +103,20 @@ class Quizzes:
         myfile.write(question_section(question))
       myfile.write(end_section())
       myfile.close()
+      print(f"{mydir}\\files\\{quiz.guid}\\{quiz.guid}.xml created")
 
       #Write the assessment meta file
       myfile = open(f"files/{quiz.guid}/assessment_meta.xml","w")
       myfile.write(assessment_file(quiz))
       myfile.close()
+      print(f"{mydir}\\files\\{quiz.guid}\\assessment_meta.xml created")
     
     shutil.make_archive("newquiz", 'zip', 'files')
+    print(f"{mydir}\\newquiz.zip created")
 
   def cleanup(self):
     my_dir = os.path.dirname(os.path.realpath(__file__))
-    my_dir = my_dir+"/files"
+    my_dir = my_dir+"\\files"
 
     for item in os.walk(my_dir):
       if  item[0].find("g8ce2009") >= 0:
@@ -192,22 +197,17 @@ class Question:
   def get_answers(self, answers):
     answer_return = []
     for answer in answers:
-      safe_answer = self.safe_string(answer)
+      safe_answer = self.safe_string(answer)[0]
       answer_return.append(Answer(safe_answer.split("~")))
     
     return answer_return
   
   def get_text(self, text):
     text_return = []
-    escape = False
+    safe_escape = ['', False]
     for line in text:
-      if line == "|":
-        escape = not escape
-        continue
-      if escape:
-        text_return.append(self.escape_html(line))
-      else:
-        text_return.append(self.safe_string(line))
+      safe_escape = self.safe_string(line, safe_escape[1])
+      text_return.append(safe_escape[0])
     
     return text_return
 
@@ -228,17 +228,23 @@ class Question:
     
     return escape_return
 
-  def safe_string(self, string):
+  def safe_string(self, string, escape=False):
     string_return = ''
+    replace_char = ''
     for ch in string:
-      if ch == '<':
-        string_return += '&lt;'
-      elif ch == '>':
-        string_return += '&gt;'
+      if ch == "|":
+        escape = not escape
+      if escape:
+        replace_char = "&amp;lt;"
       else:
+        replace_char = '&lt;'
+
+      if ch == '<':
+        string_return += replace_char
+      elif ch != '|':
         string_return += ch
 
-    return string_return
+    return [string_return, escape]
   
   def get_type(self, question_type):
     if question_type == 'multiblank':
