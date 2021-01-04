@@ -37,8 +37,15 @@ def question_section(question):
         <presentation>
           <material>
             <mattext texttype="text/html">&lt;div&gt;\n'''
+  escape_para = False
   for text in question.text:
-    question_return += f"{para(text)}\n"
+    if text == "***":
+      escape_para = not escape_para
+      continue
+    if escape_para:
+      question_return += f"{text}\n"
+    else:
+      question_return += f"{para(text)}\n"
 
   question_return +='''
 &lt;/div&gt;</mattext>

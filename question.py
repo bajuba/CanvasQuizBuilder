@@ -193,7 +193,7 @@ class Question:
   def get_answers(self, answers):
     answer_return = []
     for answer in answers:
-      safe_answer = self.safe_string(answer)[0]
+      safe_answer = self.safe_string(answer, False, True)[0]
       answer_return.append(Answer(safe_answer.split("~")))
     
     return answer_return
@@ -214,7 +214,7 @@ class Question:
 
     return feedback_return
 
-  def safe_string(self, string, escape=False):
+  def safe_string(self, string, escape=False, amp_escape=False):
     string_return = ''
     replace_char = ''
     space_count = 0
@@ -233,6 +233,8 @@ class Question:
 
       if ch == '<':
         string_return += replace_char
+      elif ch == '&' and amp_escape:
+        string_return += "&amp;"
       elif ch != '|':
         if space_count == 4:
           string_return = string_return[:-3]
