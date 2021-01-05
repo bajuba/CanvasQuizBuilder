@@ -1,15 +1,28 @@
-Unit 1 Practice
+Test
 description~Complete the following practice exercises to help cement your understanding of basic programming principles
-attempts~4
-shuffle~false
 ###
-01. Variables
+03. Character Codes
 ###
 multiselect~1
 ###
-Declare a variable called name:
-    Hello
+Use character codes to make the following arithmetic statements true:
+1 [1] 3 || 5 + 3
+5 [2] 2 | <p></p> 
 ###
-1~let~ ~Declare~Let~Define
+1~&lt;~&lt~&gt;~&gt~#gt;~#lt;
+2~&gt;~&lt;~&lt~&gt~#gt;~#lt;
+###
+###
+04. Semantic Elements
+###
+multiselect~1
+###
+Create an appropriate element to contain the following element:
+[1]
+    <h1>Website Title</h1>|
+[2]
+###
+1~<header>~<main>~<footer>~<nav>~<title>
+2~</header>~</main>~</footer>~</nav>~</title>
 ###
 ######

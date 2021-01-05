@@ -218,9 +218,18 @@ class Question:
     string_return = ''
     replace_char = ''
     space_count = 0
-    for ch in string:
+    i = -1
+    while i < len(string)-1:
+      i += 1
+      ch = string[i]
       if ch == "|":
-        escape = not escape
+        if i+1 < len(string) and string[i+1] == "|":
+          string_return += "||"
+          i += 1
+          continue
+        else:
+          escape = not escape
+          continue
       if escape:
         replace_char = "&amp;lt;"
       else:
