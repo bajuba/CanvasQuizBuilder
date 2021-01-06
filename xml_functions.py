@@ -13,7 +13,7 @@ def start_section(quiz):
     <section ident="root_section">'''
 
 def question_section(question):
-  question_return = f'''<item ident="g55e6d962093946e0f770fe3ddd6ff{randint(100, 999)}" title="{question.title}">
+  question_return = f'''<item ident="{question.guid}" title="{question.title}">
         <itemmetadata>
           <qtimetadata>
             <qtimetadatafield>

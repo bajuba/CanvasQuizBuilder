@@ -7,7 +7,7 @@ multiselect~1
 ###
 Use character codes to make the following arithmetic statements true:
 1 [1] 3 || 5 + 3
-5 [2] 2 | <p></p> 
+5 [2] 2 | <p></p> |
 ###
 1~&lt;~&lt~&gt;~&gt~#gt;~#lt;
 2~&gt;~&lt;~&lt~&gt~#gt;~#lt;
@@ -19,7 +19,7 @@ multiselect~1
 ###
 Create an appropriate element to contain the following element:
 [1]
-    <h1>Website Title</h1>|
+    |<h1>Website Title</h1>|
 [2]
 ###
 1~<header>~<main>~<footer>~<nav>~<title>

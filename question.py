@@ -179,8 +179,12 @@ class Quiz:
     return guid + str(Quiz.ident_counter)
 
 class Question:
+  identifier = 'g55e6d962093946e0f770fe3ddd'
+  ident_counter = 0
+
   def __init__(self, question):
     self.title = question["title"]
+    self.guid = Question.identifier + self.gen_guid()
     self.text = self.get_text(question["text"])
     qtype = question["type"].split("~")
     self.points = qtype[1] if len(qtype) > 1 else 0
@@ -210,7 +214,7 @@ class Question:
   def get_feedback(self, feedback):
     feedback_return = []
     for line in feedback:
-      feedback_return.append(self.safe_string(line))
+      feedback_return.append(self.safe_string(line)[0])
 
     return feedback_return
 
@@ -276,6 +280,14 @@ class Question:
     for answer in self.answers:
       answer.type = self.type
       answer.point_weight = 100 / len(self.answers)
+
+  def gen_guid(self):
+    Question.ident_counter += 1
+    start = len(str(Question.ident_counter))
+    guid = ""
+    for i in range(start, 6):
+      guid += "0"
+    return guid + str(Question.ident_counter)
 
 class Answer:
 
