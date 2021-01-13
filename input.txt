@@ -1,734 +1,3 @@
-Unit 1 Practice
-###
-01. Variables
-###
-multiselect~1
-###
-Declare a string variable called name:
-[1] name;
-###
-1~string~ ~Declare~let~Define~int~double~boolean~char
-###
-###
-02. Variables
-###
-multiselect~1
-###
-Declare a string variable called name and assign it an appropriate value:
-[1] name [2] [3];
-###
-1~string~ ~Declare~let~Define~int~double~boolean~char
-2~=~>>~==~=>
-3~"Bob Johnson"~Bob Johnson~"Bob Johnson~23
-###
-###
-03. Variables Vs Literal
-###
-multichoice~1
-###
-The following is a string literal:
-"I am a string"
-###
-1~True~False
-###
-###
-04. Variables
-###
-multiselect~1
-###
-Declare an integer variable called age and assign it an appropriate value:
-[1] age [2] [3]
-###
-1~int~ ~Declare~let~Define~double~string~boolean~char
-2~=~>>~==~=>
-3~23;~"23";~twenty-three;~23
-###
-###
-05. Variables
-###
-multiselect~1
-###
-Declare a boolean variable called canVote and assign it an appropriate value:
-[1] canVote [2] [3]
-###
-1~bool~ ~Declare~let~Define~double~string~int~boolean~char
-2~=~>>~==~=>
-3~true;~"true";~False;~"false";
-###
-###
-06. Variables
-###
-multiselect~1
-###
-Declare a character variable called character and assign it an appropriate value:
-[1] character [2] [3]
-###
-1~char~ ~Declare~let~Define~double~string~int~boolean
-2~=~>>~==~=>
-3~'c';~"c";~c;~23;
-###
-###
-07. Variables
-###
-multiselect~1
-###
-Declare a double variable called interestRate and assign it an appropriate value:
-[1] interestRate [2] [3]
-###
-1~double~ ~Declare~let~Define~string~int
-2~=~>>~==~=>
-3~.05;~".05";~05~"Bob Johnson";
-###
-###
-08. Variables
-###
-multiselect~1
-###
-Match the value with the correct datatype:
-[1] is an integer
-[2] is a string
-[3] is a double
-[4] is a boolean
-[5] is a character
-###
-1~4902~23.06~"Bob Johnson"~1,920~'g'~true~False
-2~"Bob Johnson"~4902~23.06~1,920~'g'~true~False
-3~23.06~4902~"Bob Johnson"~1,920~'g'~true~False
-4~true~4902~23.06~"Bob Johnson"~1,920~'g'~False
-5~'g'~4902~23.06~"Bob Johnson"~1,920~true~False
-###
-###
-09. String Operators
-###
-multiselect~1
-###
-Indicate whether the following statements would be true or false:
-"Bob Johnson" - "son" = "Bob John" [1]
-"Bob Johnson" + "son" = "Bob Johnsonson" [2]
-"Bob Johnson" / "son" = "Bob John" [3]
-"Bob Johnson" * "son" = "Bobson Johnsonson" [4]
-###
-1~False~True
-2~True~False
-3~False~True
-4~False~True
-###
-###
-10. String Operators
-###
-multiselect~1
-###
-What would the following produce?:
-"dinosaur" + "jones" = [1]
-"dinosaur" - "saur" = [2]
-"dinosaur" + "jones" + "jr" = [3]
-("dinosaur" + "jones") / "s" = [4]
-("dinosaur" + "jones") * "jr"  = [5]
-###
-1~"dinosaurjones"~"dinosaur jones"~error~"dinosaur+jones"
-2~error~"dino"~"dino-saur"~dino
-3~"dinosaurjonesjr"~"dinosaur jones jr"~error~"dinosaur+jones+jr"
-4~error~"dinoaur jone"~"dinosaur/sjones/s"~"dinosaur jones"
-5~error~"dinosaurjrjonesjr"~"dinosaurjr jonesjr"~"dinosaurjonesjrjr"
-###
-###
-11. String Concatenation
-###
-multiselect~1
-###
-What would the following produce?:
-"1" + "1" = [1] 
-"20" + "40" = [2]
-4 + "10" = [3]
-"Bob" + 30 = [4]
-16 + "Bob" = [5]
-###
-1~"11"~2~"1+1"~error
-2~"2040"~"20+40"~60~error
-3~"410"~14~error~"14"
-4~"Bob30"~"Bob 30"~error~"Bob+30"
-5~"16Bob"~error~"16+Bob"~"16 Bob"
-###
-###
-12. Escape Characters
-###
-multiselect~1
-###
-Insert the correct escape characters:
-"I'm on one side of a tab [1] and I'm on the other"
-"I'm on one line [2] and I'm on another"
-"I'm on one side of a backslash [3] and I'm on the other side of a backslash"
-"[4]I'm surrounded by single-quotes[5]"
-"[6]I'm surrounded by double-quotes[7]"
-###
-1~\t~\n~\\~\'~\"~\v~\a
-2~\n~\t~\\~\'~\"~\v~\a
-3~\\~\t~\n~\'~\"~\v~\a
-4~\'~\t~\n~\\~\"~\v~\a
-5~\'~\t~\n~\\~\"~\v~\a
-6~\"~\t~\n~\\~\'~\v~\a
-7~\"~\t~\n~\\~\'~\v~\a
-###
-###
-13. Output
-###
-multiselect~1
-###
-Display a greeting to the world:
-[1]
-###
-1~Console.WriteLine("Hello, world");~Console.WriteLine("Hello, world");~display("Hello, world");~output("Hello, world");
-###
-###
-14. Output
-###
-multiselect~1
-###
-Assume a variable called name with a value of "Bob Johnson". Display a greeting using this variable:
-[1]([2]);
-###
-1~Console.WriteLine~Console.WriteLine~display~Output~print
-2~"Hello, " + name~"Hello, name"~"Hello, Bob Johnson"~"Hello, "name
-###
-###
-15. Output
-###
-multiselect~1
-###
-Assume a variable called name with a value of "Bob Johnson" and a variable called age with a value of 23. Using two lines of code, display a greeting and the age variable on the same output line:
-[1]([2]);
-[3]([4]);
-###
-1~Console.Write~Console.WriteLine~display~Output~Console.WriteLine~print
-2~"Hello, " + name~"Hello,", name, end=""~"Hello, Bob Johnson"~"Hello, "name
-3~Console.Write~Console.WriteLine~display~Output~Console.WriteLine~print
-4~". You are, " + age~". You are,", age, end=""~". You are 23"~". You are + age
-###
-###
-16. Input
-###
-multiselect~1
-###
-Retrieve a value from the user:
-[1]();
-###
-1~console.ReadLine~prompt~input~get~retrieve
-###
-###
-17. Input
-###
-multiselect~1
-###
-Assume a string variable called name which has no initial value. Prompt the user to enter their name and assign that value to the name variable:
-[1]("Please enter your name: ");
-name [2] [3]();
-###
-1~Console.WriteLine~Console.ReadLine~Console.WriteLine~print~display
-2~=~>>~==~=>
-3~Console.ReadLine~get~retrieve~input
-###
-###
-18. Parsing
-###
-multiselect~1
-###
-Assume a variable called age with a value of "23". What will age be in 10 years?:
-ageInTenYears [1] [2]
-###
-1~=~>>~==~=>
-2~int.Parse(age) + 10;~parseInt(age) + 10;~age + 10;~int(age) + 10;
-###
-###
-19. Parsing
-###
-multiselect~1
-###
-Assume a variable called interestRate with a value of ".05". Double the interest rate:
-interestDoubled [1] [2]
-###
-1~=~>>~==~=>
-2~double.Parse(interestRate) * 2;~double.convert(interestRate) * 2;~interestRate * 2;~double(interestRate) * 2;
-###
-###
-20. Parsing
-###
-multiselect~1
-###
-Declare a variable called age and assign it an appropriately typed value retrieved from the user:
-[1] age [2] [3]([4]());
-###
-1~int~ ~Declare~let~Define
-2~=~>>~==~=>
-3~int.Parse~Int32.convert~parseInt~int
-4~Console.ReadLine~prompt~get~retrieve~input
-###
-###
-21. Parsing
-###
-multiselect~1
-###
-Declare a variable called interestRate and assign it an appropriately typed value retrieved from the user:
-[1] interestRate [2] [3]([4]());
-###
-1~double~ ~Declare~let~Define~int~string
-2~=~>>~==~=>
-3~double.Parse~Int32.convert~parseDouble~double
-4~Console.ReadLine~prompt~get~retrieve~input
-###
-###
-22. Casting
-###
-multiselect~1
-###
-Assume an integer variable called blinks with a value of 200 and an integer variable called minutes with a value of 5. Create a double variable called blinksPerMinute and assign it the result of dividing blinks by minutes: 
-[1] blinksPerMinute [2] [3];
-###
-1~double~ ~Declare~let~Define~int~string
-2~=~>>~==~=>
-3~(double)blinks / (double)minutes~double.Parse(blinks / minutes)~blinks / minutes~(blinks / minutes).ToDouble()
-###
-###
-23. Formatting
-###
-multiselect~1
-###
-Declare a variable called accountBalance and assign it a decimal value retrieved from the user. Display this value with only 2 decimal points:
-[1] accountBalance [2] [3]([4]());
-[5]("Your balance is " + [6]);
-###
-1~double~ ~Declare~Let~Define~string~int
-2~=~>>~==~=>
-3~double.Parse~Int32.convert~parseDouble~float
-4~Console.ReadLine~prompt~get~retrieve~input
-5~Console.WriteLine~Console.WriteLine~display~Output
-6~String.Format("{0:.00}", accountBalance)~accountBalance.toFixed(2)~format(accountBalance, 2)~parseFloat(accountBalance, 2)~accountBalance.format(2)
-###
-###
-24. Comprehensive
-###
-multiselect~2
-###
-Declare a variable called name and assign it a value retrieved from the user. Declare a variable called age and assign it an appropriately typed value retrieved from the user. Display a message greeting the user and letting them know how old they will be in ten years:
-[1]("Please enter your name: ");
-[2] name [3] [4]();
-[5]("Please enter your age: ");
-[6] age [7] [8]([9]());
-[10]([11]);
-[12]([13]);
-###
-1~Console.Write~Console.WriteLine~display~Output
-2~string~let~ ~Declare~int~Define~double
-3~=~>>~==~=>
-4~Console.ReadLine~prompt~input~get
-5~Console.Write~Console.WriteLine~display~Output
-6~int~string~let~ ~Declare~Define~double
-7~=~>>~==~=>
-8~int.Parse~parseInt~int~Int32.Convert
-9~Console.ReadLine~prompt~input~get~Console.Prompt
-10~Console.Write~Console.WriteLine~display~Output
-11~"Hello," + name~Hello, {name}~"Hello + name"~Hello," + name
-12~Console.WriteLine~Console.WriteLine~display~Output
-13~". You will be " + (age + 10) + "years old in ten years"~. You will be {age+10} years old in ten years~". You will be " + age + 10 + "years old in ten years"~". You will be", age + 10, "years old in ten years"
-###
-######
-Unit 1 Terminology
-###
-01. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-int count = 0;
-
-In this code, int is ____________
-###
-1~a class name or alias~a statement terminator~a variable name~the assignment operator~a string literal~an integer
-###
-###
-02. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-char character = 'g';
-
-In this code, character is ____________
-###
-1~a variable name~a declaration keyword~a class name or alias~the assignment operator~the variable type~a string literal~an integer
-###
-###
-03. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-int jumps = 3;
-jumps = jumps + 1;
-
-In this code, jumps is ____________
-###
-1~a variable name~a class name or alias~a statement terminator~the assignment operator~the variable type~a string literal~an integer
-###
-###
-04. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-string sandwichType = "sub";
-
-In this code, the equals sign(=) is ____________
-###
-1~the assignment operator~a variable name~a declaration keyword~a statement terminator~the variable type~a string literal~an integer
-###
-###
-05. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-sandwichType = "club";
-
-In this code, the semicolon(;) is ____________
-###
-1~a statement terminator~the assignment operator~a variable name~a declaration keyword~the variable type~a string literal~an integer
-###
-###
-06. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-variable = 'k';
-
-In this code, k is ____________
-###
-1~a character literal~a variable name~a declaration keyword~the variable type~a string literal~an integer
-###
-###
-07. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-count = count + 10;
-
-In this code, count is ____________
-###
-1~a variable name~a statement terminator~the assignment operator~a class name or alias~the variable type~a string literal~an integer
-###
-###
-08. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-age = "10";
-
-In this code, 10 is ____________
-###
-1~a string literal~a variable name~a statement terminator~a character literal~a class name or alias~the variable type~an integer
-###
-###
-09. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-name = "Bob Johnson"; age = 23;
-Console.WriteLine(name + ": " + age);
-
-In this code, the first two semicolons(;) are ____________
-###
-1~statement terminators~string literals~variable names~assignment operators~declaration keywords~variable types~integers
-###
-###
-10. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-count = 8 + 10;
-
-In this code, the plus sign(+) is ____________
-###
-1~an addition operator~a subtraction operator~a division operator~a string concatenation operator~part of a variable name~part of a string literal~a multiplication operator
-###
-###
-11. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-count = 8 - 10;
-
-In this code, the minus sign(-) is ____________
-###
-1~a subtraction operator~an addition operator~a division operator~a string concatenation operator~part of a variable name~part of a string literal~a multiplication operator
-###
-###
-12. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-count = 8 * 10;
-
-In this code, the asterisk(*) is ____________
-###
-1~a multiplication operator~a subtraction operator~an addition operator~a division operator~a string concatenation operator~part of a variable name~part of a string literal
-###
-###
-13. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-count = count + 10;
-
-In this code, the plus sign(+) is ____________
-###
-1~Either an addition operator or a string concatenation operator depending on the type of the count variable~Either an addition operator or a multiplication operator depending on the value of the count variable~an addition operator~Either a string concatenation operator or a division operator depending on the value of the count variable~a string concatenation operator~part of a variable name~part of a string literal
-###
-###
-14. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-count = 8 / 10;
-
-In this code, the forward-slash(/) is ____________
-###
-1~a division operator~a multiplication operator~a subtraction operator~an addition operator~a string concatenation operator~part of a variable name~part of a string literal
-###
-###
-15. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-count = "Hello + name";
-
-In this code, the plus sign(+) is ____________
-###
-1~part of a string literal~a division operator~a multiplication operator~a subtraction operator~an addition operator~a string concatenation operator~part of a variable name
-###
-In this case, the + is simply part of a string and serves no functional purpose
-###
-16. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-count = (double)8 / 10;
-
-In this code, (double) is ____________
-###
-1~a cast~a declaration keyword~a statement terminator~an arithmetic operator~a string concatenation operator~part of a variable name~part of a string literal
-###
-Even if the count variable is a double, it will only receive an integer value(dropping any digits after the decimal point) from integer division. If at least one of the divisors is a double, the computer will use double division instead, allowing the result to be a double as well
-###
-17. Terminology
-###
-multiselect~2
-###
-Consider the following code:
-Console.WriteLine("John will be " + (int.Parse(age) + 10) + " in 10 years");
-
-In this code, age is [1]
-In this code, John is [2]
-In this code, 10 is [3]
-###
-1~a variable name~a statement terminator~the assignment operator~a class name or alias~the variable type~a string literal~an integer
-2~part of a string literal~part of a variable name~part of a statement terminator~part of the assignment operator~part of a variable name~part of a declaration keyword~part of the variable type~part of an integer
-3~an integer and part of a string literal~only an integer~only part of a string literal~not present~a double~part of a variable name
-###
-###
-18. Terminology
-###
-multiselect~2
-###
-Consider the following code:
-string<sup>1</sup> name<sup>2</sup> =<sup>3</sup> "Bob Johnson"<sup>4</sup>;<sup>5</sup>
-
-Identify each part of the code by its term
-1:[1]<br> 2:[2]<br> 3:[3]<br> 4:[4]<br> 5:[5]
-###
-1~a class name or alias~a statement terminator~a variable name~the assignment operator~a string literal~an integer
-2~a variable name~a class name or alias~a statement terminator~the assignment operator~the variable type~a string literal~an integer
-3~the assignment operator~a class name or alias~a statement terminator~the variable type~a variable name~a string literal~an integer
-4~a string literal~a class name or alias~a statement terminator~the assignment operator~the variable type~a variable name~an integer
-5~a statement terminator~a class name or alias~a variable name~the assignment operator~the variable type~a string literal~an integer
-###
-######
-Unit 1 - Exercise 1
-description~Complete this C# exercise. Note: For readability and proper grading, all operators should have a space on either side (e.g. 1 + 1 = 2) whereas (1+1 = 2) will be marked incorrect
-###
-01. Chudson Radios
-###
-multiblank~20
-###
-Employees at Chudson Radios have been told they'll get a bonus for meeting sales goals. The store manager has asked them to set their own goals. The employees want a program to help them understand realistic goals. The program should ask them how many sales they wish to make and how many days they have. It will then calculate and display the number of sales they'd need to make each day in order to meet their goal.
-using System;
-
-class MainClass {
-    public static void Main (string[] args) {
-        [1]("Please enter your goal in number of sales: ");
-        [2] total = [3]([4]());
-        [5]("How many days do you have to complete your goal? ");
-        [6] days = [7]([8]());
-        [9] numberPerDay = [10];
-        [11]("You will need to make " + [12] + " sales each day in order to reach your goal of " + [13] + " in " + [14] + " days");
-    }
-}
-Expected Output:
->>You will need to make 16.666666666666668 sales each day in order to reach your goal of 100 in 6 days
-###
-1~Console.WriteLine~Console.Write
-2~int
-3~int.Parse~Int32.Parse
-4~Console.ReadLine
-5~Console.WriteLine~Console.Write
-6~int
-7~int.Parse~Int32.Parse
-8~Console.ReadLine
-9~double
-10~(double)total / days~(double)total / (double)days~total / (double)days
-11~Console.WriteLine~Console.Write
-12~numberPerDay
-13~total
-14~days
-###
-Check out a working example of this exercise:
-Exercise 1-1~https://repl.it/@jmunger/CIS-162-Exercise-1-1-jewos
-######
-Unit 1 - Exercise 2
-description~Complete this C# exercise. Note: For readability and proper grading, all operators should have a space on either side (e.g. 1 + 1 = 2) whereas (1+1 = 2) will be marked incorrect
-###
-02. Brianna Watt
-###
-multiblank~20
-###
-Brianna Watt, a consultant doing business as Watt Gives, wants a program to create an invoice for consulting services. Normally, she works on a project for three days before sending an invoice. She writes down the number of hours worked on each day and needs a program that asks for these amounts, totals them, and multiplies the amount by her standard rate of $30.65 per hour. The invoice should include Brianna’s business name, the client’s business name, the total number of hours worked, the rate, and the total amount billed. The information will be displayed onscreen.
-using System;
-
-class MainClass {
-    public static void Main (string[] args) {
-        [1]("Enter client's name: ");
-        [2] clientName = [3]();
-        [4] businessName = [5]
-        [6] rate = [7]
-        [8]("Hours worked on day 1: ");
-        [9] day1 = [10]([11]());
-        [12]("Hours worked on day 2: ");
-        [13] day2 = [14]([15]());
-        [16]("Hours worked on day 3: ");
-        [17] day3 = [18]([19]());
-        [20] totalHours = [21]
-        [22] totalCharge = [23]
-        [24]("Brianna Watt DBA " + [25]);
-        [26]("Invoice for " + [27]);
-        [28]("Hours: " + [29]);
-        [30]("Rate: " + [31]);
-        [32]("Total: " + [33]);
-    }
-}
-Expected Output:
->>Brianna Watt DBA Watt Gives
->>Invoice for Grunge Inc.
->>Hours: 20
->>Rate: $30.65
->>Total: $613
-###
-1~Console.Write~Console.WriteLine
-2~string
-3~Console.ReadLine
-4~string
-5~"Watt Gives";
-6~double
-7~30.65;
-8~Console.Write~Console.WriteLine
-9~int
-10~int.Parse~Int32.Parse
-11~Console.ReadLine
-12~Console.Write~Console.WriteLine
-13~int
-14~int.Parse~Int32.Parse
-15~Console.ReadLine
-16~Console.Write~Console.WriteLine
-17~int
-18~int.Parse~Int32.Parse
-19~Console.ReadLine
-20~int
-21~day1 + day2 + day3~day1 + day3 + day2~day2 + day1 + day3~day2 + day3 + day1~day3 + day1 + day2~day3 + day2 + day1
-22~int
-23~totalHours * rate;~rate * totalHours;
-24~Console.WriteLine
-25~businessName
-26~Console.WriteLine
-27~clientName
-28~Console.WriteLine
-29~totalHours
-30~Console.WriteLine
-31~rate~String.Format("{0:C}", rate)~String.Format("{0:00}", rate)
-32~Console.WriteLine
-33~totalCharge~String.Format("{0:C}", totalCharge)~String.Format("{0:00}", totalCharge)
-###
-Check out a working example of this exercise:
-Exercise 1-2~https://repl.it/@jmunger/CIS-162-Exercise-1-2-buesd
-######
-Unit 1 - Exercise 3
-description~Complete this C# exercise. Note: For readability and proper grading, all operators should have a space on either side (e.g. 1 + 1 = 2) whereas (1+1 = 2) will be marked incorrect
-###
-03. Zach Stern
-###
-multiblank~20
-###
-Zach Stern, a floor tiler doing business as Zach Stern’s Tile, needs to know the area of any rectangular floor he’s tiling. He wants a program that asks for the room’s length and width and the cost per square foot of tile. The program should calculate and display the room’s area in square feet and the cost of the tile needed to cover the room. Dollar values should be formatted to two decimal places with a dollar sign in front.
-using System;
-
-class MainClass {
-    public static void Main (string[] args) {
-        [1]("Enter length of room in feet: ")'
-        [2] length = [3]([4]());
-        [5]("Enter width of room in feet: ");
-        [6] width = [7]([8]());
-        [9]("Enter cost per square foot: ");
-        [10] costPerSqFt = [11]([12]());
-        [13] sqFeet = [14]
-        [15] totalCost = [16]
-        [17]("The room is " + [18] + " square feet.\nAt " + [19] + " per sq.ft., It will cost " + [20] + " to tile it.");
-    }
-}
-Expected Output:
->>The room is 300 square feet.
->>At $25.00 per sq.ft., It will cost $7,500.00 to tile it.
-###
-1~Console.Write~Console.WriteLine
-2~int
-3~int.Parse~Int32.Parse
-4~Console.ReadLine
-5~Console.Write~Console.WriteLine
-6~int
-7~int.Parse~Int32.Parse
-8~Console.ReadLine
-9~Console.Write~Console.WriteLine
-10~double
-11~double.Parse
-12~Console.ReadLine
-13~int
-14~length * width;~width * length;
-15~double
-16~sqFeet * costPerSqFt;~costPerSqFt * sqFeet;
-17~Console.Write~Console.WriteLine
-18~sqFeet
-19~String.Format("{0:C}", costPerSqFt)~String.Format("{0:C}",costPerSqFt)
-20~String.Format("{0:C}", totalCost)~String.Format("{0:C}",totalCost)
-###
-Check out a working example of this exercise:
-Exercise 1-3~https://repl.it/@jmunger/CIS-162-Exercise-1-3-msuqw
-######
 Unit 2 Practice
 ###
 01. Relational Operators
@@ -763,20 +32,16 @@ Make the following statements true by inserting the correct relational operator:
 4~>=~<~=~>~!=
 ###
 ###
-03. String Interpolation
+03. Variables
 ###
 multiselect~1
 ###
-For clarification, the possible answers with quotation marks will have the type of quotation used in parentheses after the answer
-Get the user's name and display it using string interpolation:
-Console.Write("Please enter your name: ");
-string name = Console.ReadLine();
-Console.WriteLine([1]Hello, [2]name[3]); 
-
+Declare a boolean variable called canVote and assign it an appropriate value:
+[1] canVote [2] [3]
 ###
-1~$"(double-quote)~`(backtick)~'(single-quote)~f'(single-quote)~"(double-quote)
-2~{~f{~"{(double-quote)~'{(single-quote)~`{(backtick)
-3~}"(double-quote)~}`(backtick)~}'(single-quote)~"}(double-quote)~`}(backtick)
+1~boolean~ ~Declare~let~Define~double~string~int~boolean~char
+2~=~>>~==~=>
+3~true;~"true";~False;~"false";
 ###
 ###
 04. Conditional Statements
@@ -808,7 +73,7 @@ multiselect~1
 Write a conditional statement to test whether value1 is larger than value2. If it is, test whether it is smaller than value3. If so, explain value1's relationship to the other two variables:
 [1](value1 [2] value2) {
     [3]([4] [5] value3) {
-        Console.WriteLine([6]);
+        System.out.println([6]);
     }
 }
 ###
@@ -828,7 +93,7 @@ Write a conditional statement to test whether value1 is at least as large as val
 [1](value1 [2] value2) {
 
 } [3] {
-    Console.WriteLine([4]);
+    System.out.println([4]);
 }
 ###
 1~if~condition~case~switch
@@ -845,7 +110,7 @@ Write a conditional statement to test whether value1 is as large as or larger th
 [1](value1 [2] value2) {
 
 } [3]([4] [5] value3) {
-    Console.WriteLine([6]);
+    System.out.println([6]);
 }
 ###
 1~if~condition~case~switch
@@ -901,17 +166,16 @@ multiselect~1
 Assume a variable called selection with the value of 2. Write a conditional structure to accomplish the following: On selection 1, display a message saying the color is yellow. On selection 2, display a message saying the color is blue. On selection 3, display a message saying the color is red. If selection is not 1, 2, or 3, display a message saying the selection was invalid:
 [1]([2]) {
     [3] 3:
-        Console.WriteLine([4]);
+        System.out.println([4]);
         [5]
     [6] 2:
-        Console.WriteLine([7]);
+        System.out.println([7]);
         [8]
     [9] 1:
-        Console.WriteLine([10]);
+        System.out.println([10]);
         [11]
     [12]:
-        Console.WriteLine([13]);
-        [14]
+        System.out.println([13]);
 }
 ###
 1~switch~condition~case~if
@@ -927,142 +191,39 @@ Assume a variable called selection with the value of 2. Write a conditional stru
 11~break;~end;~}~continue;~else
 12~default~if~else~else if(selection < 1)
 13~"Invalid selection"~"The color is green"~"The color is red"~"The color is blue"
-14~break;~end;~}~continue;~else
 ###
 ###
-13. Arrays
+13. Console Menu
 ###
-multiselect~1
+multiselect~3
 ###
-Create an integer array called grades to contain five numbers
-[1] grades = [2] [3]
-###
-1~int[]~int[5]~new~int~array
-2~new~int[]~int[5]~int~array
-3~int[5];~int[];~new;~int;~array;
-###
-###
-14. Arrays
-###
-multiselect~1
-###
-Assume an integer array of five numbers called grades. Display the third number in this array:
-Console.WriteLine([1]);
-###
-1~grades[2]~grades[3]~new grades[3]~int grades[3]~array grades[3]~
-###
-Since C# (and most programming languages) begin arrays with index 0, index 2 is actually the third item in the array. (0, 1, 2)
-###
-15. Arrays
-###
-multiselect~1
-###
-Create a multidimensional integer array called table with three arrays of two items:
-[1] grades = [2] [3]
-###
-1~int[,]~int[3,2]~new~int[2,3]~array
-2~new~int[,]~int[3,2]~int[2,3]~array
-3~int[3,2];~int[,];~new;~int[2,3];~array;
-###
-###
-16. Arrays
-###
-multiselect~1
-###
-Assume a multidimensional integer array of 3 arrays with 2 items called table. Display the second item in the third array of this multidimensional array:
-Console.WriteLine([1]);
-###
-1~table[2,1]~table[2,3]~table[3,2]~new array[2,1]~int[3,2] table
-###
-The first value represents the array you are accessing and the second value represents the item in that array. Since C# (like most programming languages) begins at index 0, table[2,1] represents the third array's second item
-###
-17. Loops
-###
-multiselect~1
-###
-Assume a string array of five strings called greetings. Create a loop which will use a count variable to print out the contents of each string:
-[1]([2];[3];[4]) {
-    Console.WriteLine([5]);
-}
-###
-1~for~let~while~do~loop~foreach
-2~int i = 0~i = 0~i++~i < 5~let i = 0~int i == 0
-3~i < 5~int i = 0~i = 0~i++~let i = 0~int i == 0
-4~i++~i < 5~int i = 0~i = 0~let i = 0~int i == 0
-5~greetings[i]~greetings[0]~string greetings[i]~new array[i]~string[] greetings[i]
-###
-###
-18. Loops
-###
-multiselect~1
-###
-Assume a string array of five strings called greetings. Create a loop which will iterate over the array to print out its contents:
-[1]([2] greeting [3] [4]) {
-    Console.WriteLine([5]);
-}
-###
-1~foreach~for~let~while~do~loop
-2~string~string[]~character~char[]~ ~int
-3~in~of~for~foreach~with~using
-4~greetings~greetings[]~string[] greetings~new string[5] greetings~greeting
-5~greeting~greetings[i]~greeting[i]~greetings[greeting]~new array[]~string[] greetings[i]
-###
-###
-19. Loops
-###
-multiselect~1
-###
-Write a loop which will continue to run until the user enters an empty line:
-string input = [1];
+Write a menu application. Each menu selection should display a different greeting:
 
-[2]([3]) {
-    Console.Write("Please type something (|<|Enter> to quit): ");
-    [4] = Console.ReadLine();
+Scanner input = new Scanner(System.in);
+System.out.println("Menu");
+System.out.println("1. Hello");
+System.out.println("2. How are you?");
+System.out.println("3. What's up");
+System.out.print("Please make your selection: ");
+
+String selection = input.nextLine();
+
+[5]([6]) {
+    [7]:
+        System.out.println("Hello!");
+        [8]
+    [9]:
+        System.out.println("How are you?");
+        [10]
+    [11]:
+        System.out.println("What's up?");
+        [12]
+    [13]:
+        System.out.println("Invalid Selection");
 }
 ###
-1~null~""~''~empty~new string()
-2~while~foreach~for~let~do~loop
-3~input != ""~i < 5~input < 1~input == ""~input != ''
-4~input~i~userInput~string input~new string input
-###
-###
-20. Console Menu
-###
-multiselect~1
-###
-Write a menu which will continue to display until the user enters a blank line. Each menu selection should display a different greeting:
-string input = [1];
-
-[2]([3]) {
-    Console.WriteLine("Menu");
-    Console.WriteLine("1. Hello");
-    Console.WriteLine("2. How are you?");
-    Console.WriteLine("3. What's up");
-    Console.Write("Please make your selection (|<|Enter> to quit): ");
-    [4] = Console.ReadLine();
-
-    [5]([6]) {
-        [7]:
-            Console.WriteLine("Hello!");
-            [8]
-        [9]:
-            Console.WriteLine("How are you?");
-            [10]
-        [11]:
-            Console.WriteLine("What's up?");
-            [12]
-        [13]:
-            Console.WriteLine("Invalid Selection");
-            [14]
-    }
-}
-###
-1~null~""~''~empty~new string()
-2~while~foreach~for~let~do~loop
-3~input != ""~i < 5~input < 1~input == ""~input != ''
-4~input~i~userInput~string input~new string input
 5~switch~if~case~for~loop~condition
-6~input~input == "1"~input > 0~userInput~string input~string userInput
+6~selection~selection == "1"~selection > 0~userInput~String selection~String userInput
 7~case "1"~case 1~switch 1~condition "1"~default~case default
 8~break;~continue;~switch;~end;~case;~;
 9~case "2"~case 2~switch 2~condition "2"~default~case default
@@ -1070,7 +231,6 @@ string input = [1];
 11~case "3"~case 3~switch 3~condition "3"~default~case default
 12~break;~continue;~switch;~end;~case;~;
 13~default~case "4"~case 4~switch 4~condition "4"~case default
-14~break;~continue;~switch;~end;~case;~;
 ###
 ######
 Unit 2 Terminology
@@ -1084,7 +244,7 @@ if (count == 1)
 
 In this code, if is ____________
 ###
-1~a C# keyword~a declaration keyword~a statement terminator~a variable name~the assignment operator~the variable type~a string literal~an integer
+1~a Java keyword~a declaration keyword~a statement terminator~a variable name~the assignment operator~the variable type~a String literal~an integer
 ###
 ###
 02. Terminology
@@ -1096,7 +256,7 @@ if (count >= 3) {}
 
 In this code, count is ____________
 ###
-1~a variable name~a declaration keyword~a statement terminator~the assignment operator~the variable type~a string literal~an integer
+1~a variable name~a declaration keyword~a statement terminator~the assignment operator~the variable type~a String literal~an integer
 ###
 ###
 03. Terminology
@@ -1105,12 +265,12 @@ multichoice~1
 ###
 Consider the following code:
 if (age >= 21) {
-    Console.WriteLine("You can drink alcohol legally");
+    System.out.println("You can drink alcohol legally");
 }
 
 In this code, the greater-than(>) and equals sign(=) together are ____________
 ###
-1~a relational operator~a variable name~a logical operator~a statement terminator~the assignment operator~the variable type~a string literal~an integer
+1~a relational operator~a variable name~a logical operator~a statement terminator~the assignment operator~the variable type~a String literal~an integer
 ###
 ###
 04. Terminology
@@ -1122,7 +282,7 @@ if (number < 8 &amp;&amp; number > 4) {}
 
 In this code, the double ampersand(&amp;&amp;) is ____________
 ###
-1~a logical operator~a relational operator~an addition operator~the assignment operator~a string concatenation operator~part of a variable name~part of a string literal~a multiplication operator
+1~a logical operator~a relational operator~an addition operator~the assignment operator~a String concatenation operator~part of a variable name~part of a String literal~a multiplication operator
 ###
 ###
 05. Terminology
@@ -1134,7 +294,7 @@ if (accountBalance == 2000) {}
 
 In this code, the double equals(==) is ____________
 ###
-1~a relational operator~the assignment operator~a variable name~a logical operator~a statement terminator~the variable type~a string literal~an integer
+1~a relational operator~the assignment operator~a variable name~a logical operator~a statement terminator~the variable type~a String literal~an integer
 ###
 ###
 06. Terminology
@@ -1146,7 +306,7 @@ if (giants == "real") {}
 
 In this code, real is ____________
 ###
-1~a string literal~a statement terminator~the assignment operator~a variable name~a declaration keyword~the variable type~an integer
+1~a String literal~a statement terminator~the assignment operator~a variable name~a declaration keyword~the variable type~an integer
 ###
 ###
 07. Terminology
@@ -1173,29 +333,16 @@ This code represents ____________
 1~a boolean expression~a statement termination~an assignment statement~a declaration statement~input~output
 ###
 ###
-09. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-let name = "Bob Johnson";
-print($"Hello, {name}");
-
-In this code, $"Hello, {name}" is an example of ____________
-###
-1~string interpolation~an assignment statement~declaration statement~string concatenation~string interjection
-###
-###
 10. Terminology
 ###
 multichoice~1
 ###
 Consider the following code:
-bears = False;
+bears = false;
 
 This code, as a whole, represents ____________
 ###
-1~an assignment statement~a boolean value~a statement terminator~a string literal~a variable name~a declaration keyword~an integer
+1~an assignment statement~a boolean value~a statement terminator~a String literal~a variable name~a declaration keyword~an integer
 ###
 ###
 11. Terminology
@@ -1207,7 +354,7 @@ if (number < 8) {}
 
 In this code, the less-than sign(<) is ____________
 ###
-1~a relational operator~an addition operator~the assignment operator~a logical operator~a string concatenation operator~part of a variable name~part of a string literal~a multiplication operator
+1~a relational operator~an addition operator~the assignment operator~a logical operator~a String concatenation operator~part of a variable name~part of a String literal~a multiplication operator
 ###
 ###
 12. Terminology
@@ -1219,7 +366,7 @@ if (number < 8 || number > 4) {}
 
 In this code, the double pipe(||) is ____________
 ###
-1~a logical operator~a relational operator~an addition operator~the assignment operator~a string concatenation operator~part of a variable name~part of a string literal~a multiplication operator
+1~a logical operator~a relational operator~an addition operator~the assignment operator~a String concatenation operator~part of a variable name~part of a String literal~a multiplication operator
 ###
 ###
 13. Terminology
@@ -1234,7 +381,7 @@ switch(number) {
 
 This code is an example of ____________
 ###
-1~a switch statement~an if statement~an assignment statement~a boolean expression~a string concatenation
+1~a switch statement~an if statement~an assignment statement~a boolean expression~a String concatenation
 ###
 ###
 14. Terminology
@@ -1248,19 +395,7 @@ if (count == 2) {
 
 In this code, the open curly brace({) is ____________
 ###
-1~the beginning of a code block~a statement terminator~the beginning of a boolean expression~the end of a code block~the beginning of a case block~the beginning of a string literal
-###
-###
-15. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-let name = $"{Console.ReadLine().ToUpper()}";
-
-This code showcases ____________
-###
-1~string interpolation~string concatenation~string division~an array~string replication~string interjection
+1~the beginning of a code block~a statement terminator~the beginning of a boolean expression~the end of a code block~the beginning of a case block~the beginning of a String literal
 ###
 ###
 16. Terminology
@@ -1274,7 +409,7 @@ if (count > 5) {
 
 In this code, else {} is ____________
 ###
-1~an else statement~an if statement~an assignment statement~a multiplication statement~a boolean expression~a string interpolation
+1~an else statement~an if statement~an assignment statement~a multiplication statement~a boolean expression~a String interpolation
 ###
 ###
 17. Terminology
@@ -1314,148 +449,45 @@ name == "Bob Johnson" is [4]
 {} is [5]
 This code excerpt is an example of [6]
 ###
-1~a C# keyword~a declaration keyword~a statement terminator~a variable name~the assignment operator~the variable type~a string literal~an integer
-2~a variable name~a declaration keyword~a statement terminator~the assignment operator~the variable type~a string literal~an integer
-3~a relational operator~the assignment operator~a declaration keyword~a statement terminator~the variable type~a variable name~a string literal~an integer
-4~a boolean expression~a string literal~a declaration statement~a statement termination~an assignment statement~the variable type~a variable name
-5~an empty code block~a statement terminator~a declaration keyword~a switch statement~an empty assignment~the variable type~a string literal~an integer
+1~a Java keyword~a declaration keyword~a statement terminator~a variable name~the assignment operator~the variable type~a String literal~an integer
+2~a variable name~a declaration keyword~a statement terminator~the assignment operator~the variable type~a String literal~an integer
+3~a relational operator~the assignment operator~a declaration keyword~a statement terminator~the variable type~a variable name~a String literal~an integer
+4~a boolean expression~a String literal~a declaration statement~a statement termination~an assignment statement~the variable type~a variable name
+5~an empty code block~a statement terminator~a declaration keyword~a switch statement~an empty assignment~the variable type~a String literal~an integer
 6~an if-else statement~a switch statement~a paragraph tag~an assignment statement~a declaration statement~a boolean statement
-###
-###
-19. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-string[] names = new string[5];
-
-This code is an example of ____________
-###
-1~an array declaration~a string declaration~a string assignment~a boolean expression~a string interpolation
-###
-###
-20. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-string[,] names = new string[2,3];
-
-This code ____________
-###
-1~allocates memory for a multidimensional array of strings~allocates memory for a string variable~allocates memory for a multidimensional array of strings and assigns values to those strings~does not allocate memory~represents string interpolation
-###
-###
-21. Terminology
-###
-multichoice~1
-###
-The last index in an array of 5 items is _______________
-###
-1~4~5~not enough information given~length times width~6
-###
-###
-22. Terminology
-###
-multichoice~1
-###
-Consider the following code:
-for (int i = 0; i < 5; i++) {}
-
-This code is an example of ____________
-###
-1~a for loop~an array declaration~a while loop~an if statement~a string interpolation
-###
-###
-23. Terminology
-###
-multiselect~1
-###
-Consider the following code:
-for (int i = 0; i < 5; i++) {}
-
-In this code,
-i is [1]
-++ is [2]
-i < 5 is [3]
-###
-1~a variable name~a special variable~part of a string literal~a character literal~a class name or alias
-2~an increment operator~an addition operator~part of a string literal~a logical operator~a relational operator
-3~a boolean expression~a logical expression~an assignment statement~part of a string literal
-###
-###
-24. Terminology
-###
-multiselect~1
-###
-Consider the following code:
-string input = null;
-while (input != "") {
-    input = Console.ReadLine();
-}
-
-In this code, 
-!= is [1]
-input = Console.ReadLine() is [2]
-input is [3]
-This code is an example of [4]
-###
-1~a relational operator~an increment operator~part of a string literal~a character literal~a logical operator
-2~an assignment statement~a boolean expression~part of a string literal~a logical expression~a relational expression
-3~a variable name~a special variable~an integer variable~part of a string literal~a boolean variable
-4~a while loop~a for loop~a foreach loop~a do loop~an if statement
-###
-###
-25. Terminology
-###
-multiselect~1
-###
-Consider the following code:
-foreach (string name in names) {}
-
-In this code, 
-name is [1]
-string is [2]
-in is [3]
-names is [4]
-This code is an example of [5]
-###
-1~a variable name~an existing variable from earlier in the program~a special variable~part of a string literal
-2~a class name or alias~a variable name~an existing variable from earlier in the program~unnecessary in this context
-3~a C# keyword~a variable name~a special variable~a boolean operator~a logical operator
-4~the name of an existing iterable object such as an array or list~a variable name we created in this line to represent an array~part of a string literal~a logical expression
-5~a foreach loop~a while loop~a for loop~a do loop~an if statement
 ###
 ######
 Unit 2 - Exercise 1
-description~Complete this C# exercise. Note: For readability and proper grading, all operators should have a space on either side (e.g. 1 + 1 = 2) whereas (1+1 = 2) will be marked incorrect
+description~Complete this Java exercise. Note: For readability and proper grading, all operators should have a space on either side (e.g. 1 + 1 = 2) whereas (1+1 = 2) will be marked incorrect
 ###
 01. Guessing Game
 ###
 multiblank~20
 ###
 Write a program that will allow the user to guess a number between 1 and 10. The program will set a variable to the number to be guessed. It will then ask the user to enter a number and display whether the guess was too high, too low, or correct.
-using System;
+import java.util.Scanner;
 
-class MainClass {
-    public static void Main (string[] args) {
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         int number = 6;
-        Console.Write("Guess a number between 1 and 10: ");
-        int guess = [1](Console.ReadLine());
+        System.out.print("Guess a number between 1 and 10: ");
+        int guess = {1}(input.nextLine());
 
-        [2] ([3]) {
-            Console.WriteLine("Too high");
+        {2} ({3}) {
+            System.out.println("Too high");
         }
-        [4] ([5]) {
-            Console.WriteLine("You got it!");
+        {4} ({5}) {
+            System.out.println("You got it!");
         }
-        [6] ([7]) {
-            Console.WriteLine("Too low");
+        {6} ({7}) {
+            System.out.println("Too low");
         }
     }
 }
+1. [1] 2. [2] 3. [3] 4. [4] 5. [5] 6. [6] 7. [7]
 ###
-1~int.Parse~Int32.Parse
+1~Integer.parseInt~Int32.Parse
 2~if
 3~guess > number~number < guess
 4~if~else if
@@ -1464,36 +496,38 @@ class MainClass {
 7~guess < number~number > guess
 ###
 Check out a working example of this exercise:
-Exercise 2-1~https://repl.it/@jmunger/CIS-162-Exercise-2-1-pxqbs
+Exercise 2-1~https://repl.it/@jmunger/CSC-140-Exercise-2-1-klose
 ######
 Unit 2 - Exercise 2
-description~Complete this C# exercise. Note: For readability and proper grading, all operators should have a space on either side (e.g. 1 + 1 = 2) whereas (1+1 = 2) will be marked incorrect
+description~Complete this Java exercise. Note: For readability and proper grading, all operators should have a space on either side (e.g. 1 + 1 = 2) whereas (1+1 = 2) will be marked incorrect
 ###
 02. Greeting By Hour
 ###
 multiblank~20
 ###
 Write a program that asks the user for the hour in a 24hr format. Greet the user for the morning, afternoon, or evening, depending on whether the hour is or later than 6, 12, or 18 respectively. If the hour isn't within these ranges, wish the user a good day
-using System;
+import java.util.Scanner;
 
-class MainClass {
-    public static void Main (string[] args) {
-        Console.Write("Enter the hour in military time (1-24): ");
-        int hour = [1]
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the hour in military time (1-24): ");
+        int hour = {1}
 
-        [2] ([3]) {
-        Console.WriteLine("Good evening");
-        } [4] ([5]) {
-        Console.WriteLine("Good afternoon");
-        } [6] ([7]) {
-        Console.WriteLine("Good morning");
-        } [8] {
-        Console.WriteLine("Good day");
+        {2} ({3}) {
+        System.out.println("Good evening");
+        } {4} ({5}) {
+        System.out.println("Good afternoon");
+        } {6} ({7}) {
+        System.out.println("Good morning");
+        } {8} {
+        System.out.println("Good day");
         }
     }
 }
+1. [1] 2. [2] 3. [3] 4. [4] 5. [5] 6. [6] 7. [7] 8. [8]
 ###
-1~int.Parse(Console.ReadLine());
+1~Integer.parseInt(input.nextLine());
 2~if
 3~hour >= 18
 4~else if
@@ -1503,69 +537,58 @@ class MainClass {
 8~else
 ###
 Check out a working example of this exercise:
-Exercise 2-2~https://repl.it/@jmunger/CIS-162-Exercise-2-2-mques
+Exercise 2-2~https://repl.it/@jmunger/CSC-140-Exercise-2-2-sndea
 ######
 Unit 2 - Exercise 3
-description~Complete this C# exercise. Note: For readability and proper grading, all operators should have a space on either side (e.g. 1 + 1 = 2) whereas (1+1 = 2) will be marked incorrect
+description~Complete this Java exercise. Note: For readability and proper grading, all operators should have a space on either side (e.g. 1 + 1 = 2) whereas (1+1 = 2) will be marked incorrect
 ###
 03. Menu
 ###
 multiblank~20
 ###
-Write a program that displays a menu with the following options on separate lines: 1. Greet me, 2. Insult me, 3. Tell me a joke. The program should ask the user for a selection from the menu and perform the selected action. It should repeat this process until the user enters a blank line at which point it should thank the user for playing. If the user enters anything other than one of the options, it should inform them that they've made an invalid selection:
-using System;
+Write a program that displays a menu with the following options on separate lines: 1. Greet me, 2. Insult me, 3. Tell me a joke. The program should ask the user for a selection from the menu and perform the selected action. If the user enters anything other than one of the options, it should inform them that they've made an invalid selection:
+import java.util.Scanner;
 
-class MainClass {
-    public static void Main (string[] args) {
-        string input = null;
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        [1]([2]) {
-            Console.WriteLine("1. Greet me[3]2.Insult me[4]3. Tell me a joke");
-            Console.Write("Please make a selection (|<|Enter> to quit): ");
-            [5] = [6]
+        System.out.println("1. Greet me<b>{1}</b>2.Insult me<b>{2}</b>3. Tell me a joke");
+        System.out.print("Please make a selection: ");
+        String selection = <b>{3}</b>
 
-            [7] ([8]) {
-                [9]:
-                    Console.WriteLine("Hello, human!");
-                    [10]
-                [11]:
-                    Console.WriteLine("Your mother was a hamster and your father smelt of elderberries!");
-                    [12]
-                [13]:
-                    Console.Write("Why did the chicken cross the road?");
-                    Console.ReadLine();
-                    Console.WriteLine("to get to the other side!");
-                    [14]
-                [15]:
-                    Console.WriteLine("Thank you for playing!");
-                    [16]
-                [17]:
-                    Console.WriteLine("Invalid Selection");
-                    [18]
-            }
+        <b>{4}</b> (<b>{5}</b>) {
+            <b>{6}</b>:
+                System.out.println("Hello, human!");
+                <b>{7}</b>
+            <b>{8}</b>:
+                System.out.println("Your mother was a hamster and your father smelt of elderberries!");
+                <b>{9}</b>
+            <b>{10}</b>:
+                System.out.print("Why did the chicken cross the road?");
+                input.nextLine();
+                System.out.println("to get to the other side!");
+                <b>{11}</b>
+            <b>{12}</b>:
+                System.out.println("Invalid Selection");
         }
     }
 }
+1. [1]<br>2. [2]<br>3. [3]<br>4. [4]<br>5. [5]<br>6. [6]<br>7. [7]<br>8. [8]<br>9. [9]<br>10. [10]<br>11. [11]<br>12. [12]<br>
 ###
-1~while
-2~input != ""~!(input == "")
-3~\n
-4~\n
-5~input
-6~Console.ReadLine();
-7~switch
-8~input
-9~case "1"
-10~break;
-11~case "2"
-12~break;
-13~case "3"
-14~break;
-15~case ""
-16~break;
-17~default
-18~break;
+1~\n
+2~\n
+3~input.nextLine();
+4~switch
+5~selection
+6~case "1"
+7~break;
+8~case "2"
+9~break;
+10~case "3"
+11~break;
+12~default
 ###
 Check out a working example of this exercise:
-Exercise 2-3~https://repl.it/@jmunger/CIS-162-Exercise-2-3-nawmk
+Exercise 2-3~https://repl.it/@jmunger/CSC-140-Exercise-2-3-lopsw
 ######
