@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, shuffle
 import os
 import shutil
 from xml_functions import start_section, question_section, end_section, manifest_file, assessment_file
@@ -114,16 +114,20 @@ class Quizzes:
 
   def cleanup(self):
     my_dir = os.path.dirname(os.path.realpath(__file__))
-    my_dir = my_dir+"\\files"
+    # my_dir = my_dir+"\\files"
 
-    for item in os.walk(my_dir):
-      if  item[0].find("g8ce2009") >= 0:
-        try:
-          shutil.rmtree(item[0])
-          print(item[0], "removed")
-        except OSError as e:
-          print("Error: %s : %s" % (dir_path, e.strerror))
-
+    # for item in os.walk(my_dir):
+    #   if  item[0].find("g8ce2009") >= 0:
+    #     try:
+    #       shutil.rmtree(item[0])
+    #       print(item[0], "removed")
+    #     except OSError as e:
+    #       print("Error: %s : %s" % (dir_path, e.strerror))
+    my_dir = my_dir+"/files"
+    
+    shutil.rmtree(my_dir)
+    print(my_dir, "removed")
+    
 class Quiz:
   identifier = 'g8ce2009aaab3283573f3ef0ef1'
   ident_counter = 0
@@ -296,6 +300,7 @@ class Answer:
     self.type = ''
     self.choices = self.get_choices(answer[1:])
     self.correct_ident = self.choices[0].ident
+    shuffle(self.choices)
     self.point_weight = 0
 
   def get_choices(self, choices):
