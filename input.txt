@@ -1,28 +1,594 @@
-Test
-description~Complete the following practice exercises to help cement your understanding of basic programming principles
+Unit 2 Practice
 ###
-03. Character Codes
-###
-multiselect~1
-###
-Use character codes to make the following arithmetic statements true:
-1 [1] 3 || 5 + 3
-5 [2] 2 | <p></p> |
-###
-1~&lt;~&lt~&gt;~&gt~#gt;~#lt;
-2~&gt;~&lt;~&lt~&gt~#gt;~#lt;
-###
-###
-04. Semantic Elements
+01. Relational Operators
 ###
 multiselect~1
 ###
-Create an appropriate element to contain the following element:
-[1]
-    |<h1>Website Title</h1>|
-[2]
+Make the following statements true by inserting the correct relational operator:
+5 [1] 5
+6 [2] 9
+12 [3] 8
+6 [4] -6
 ###
-1~<header>~<main>~<footer>~<nav>~<title>
-2~</header>~</main>~</footer>~</nav>~</title>
+1~==~>~<~=~!=
+2~<~>~==~=
+3~>~<~=~==
+4~!=~<~<=~==~=
 ###
+###
+02. Relational Operators
+###
+multiselect~1
+###
+Make the following statements true by inserting the correct relational operator:
+10 [1] 3
+1 [2] 36
+4 [3] 5
+12 [4] 12
+###
+1~>=~<=~<~=~==
+2~<=~>~==~=~>=
+3~!=~>~>=~==~=
+4~>=~<~=~>~!=
+###
+###
+03. Variables
+###
+multiselect~1
+###
+Declare a boolean variable called canVote and assign it an appropriate value:
+[1] canVote [2] [3]
+###
+1~boolean~ ~Declare~let~Define~double~string~int~boolean~char
+2~=~>>~==~=>
+3~true;~"true";~False;~"false";
+###
+###
+04. Conditional Statements
+###
+multiselect~1
+###
+Write a conditional statement to test whether the two values are equal:
+[1](value1 [2] value2) {}
+###
+1~if~condition~case~switch
+2~==~>=~=~<=~!=
+###
+###
+05. Conditional Statements
+###
+multiselect~1
+###
+Write a conditional statement to test whether value1 is larger than value2:
+[1](value1 [2] value2) {}
+###
+1~if~condition~case~switch
+2~>~>=~=~<=~==~!=
+###
+###
+06. Nested Conditional Statements
+###
+multiselect~1
+###
+Write a conditional statement to test whether value1 is larger than value2. If it is, test whether it is smaller than value3. If so, explain value1's relationship to the other two variables:
+[1](value1 [2] value2) {
+    [3]([4] [5] value3) {
+        System.out.println([6]);
+    }
+}
+###
+1~if~condition~case~switch
+2~>~>=~=~<=~==~!=
+3~if~condition~case~switch
+4~value1~value2~value3~value4
+5~<~>~==~=~>=
+6~"value1 is greater than value2 but less than value3"~"value1 is greater than value2 and value3"~"value1 is less than both value2 and value3"~"value1 is greater than value2 and equal to value3"
+###
+###
+07. Else Statements
+###
+multiselect~1
+###
+Write a conditional statement to test whether value1 is at least as large as value2. If this isn't the case, explain what we can understand about the relationship between the two values:
+[1](value1 [2] value2) {
+
+} [3] {
+    System.out.println([4]);
+}
+###
+1~if~condition~case~switch
+2~>=~>~=~<=~==
+3~else~then~condition~case~if
+4~"value1 is less than value2"~"value1 may be equal to or less than value2"~"value1 is greater than value 2"~"value1 is equal to value2"
+###
+###
+08. Else If Statements
+###
+multiselect~1
+###
+Write a conditional statement to test whether value1 is as large as or larger than value2. Only if this is NOT the case, test whether value1 is smaller than value3. In the case that value1 is smaller than value3, explain what we can understand about the relationship between the values:
+[1](value1 [2] value2) {
+
+} [3]([4] [5] value3) {
+    System.out.println([6]);
+}
+###
+1~if~condition~case~switch
+2~>=~>~=~<~==
+3~else if~then if~else~case~if
+4~value1~value2~value3~value4
+5~<~>~==~=~>=
+6~"value1 is the smallest of the three values"~"We can make no assertions about the values"~"value3 is greater than value 2"~"value1 is equal to value2"
+###
+###
+09. Logical Operators
+###
+multiselect~1
+###
+Write a conditional statement to test whether value1 is as large as or larger than value2 and value1 is larger than value3:
+[1](value1 [2] value2 [3] value1 [4] value3) {}
+###
+1~if~condition~case~switch
+2~>=~>~=~<~==
+3~&&~&~and~||~or~not~!
+4~>~<=~<~=~==
+###
+###
+10. Logical Operators
+###
+multiselect~1
+###
+Write a conditional statement that will evaluate to true in the event that value1 is equal to value 2 or value1 is smaller than value3:
+[1](value1 [2] value2 [3] value1 [4] value3) {}
+###
+1~if~condition~case~switch
+2~==~>=~>~=~<
+3~||~&&~&~and~or~not~!
+4~<~>~<=~=~==
+###
+###
+11. Logical Operators
+###
+multiselect~1
+###
+Write a conditional statement that will evaluate to true in the event that value1 is not larger than value3:
+[1]([2](value1 [3] value3)) {}
+###
+1~if~condition~case~switch
+2~!~||~&&~&~and~or~not
+3~>~<~<=~=~==
+###
+###
+12. Switch Statements
+###
+multiselect~1
+###
+Assume a variable called selection with the value of 2. Write a conditional structure to accomplish the following: On selection 1, display a message saying the color is yellow. On selection 2, display a message saying the color is blue. On selection 3, display a message saying the color is red. If selection is not 1, 2, or 3, display a message saying the selection was invalid:
+[1]([2]) {
+    [3] 3:
+        System.out.println([4]);
+        [5]
+    [6] 2:
+        System.out.println([7]);
+        [8]
+    [9] 1:
+        System.out.println([10]);
+        [11]
+    [12]:
+        System.out.println([13]);
+}
+###
+1~switch~condition~case~if
+2~selection~condition~variable~age
+3~case~switch~condition~if
+4~"The color is red"~"The color is green"~"The color is yellow"~"The color is blue"~"Invalid selection"
+5~break;~end;~}~continue;
+6~case~switch~condition~if
+7~"The color is blue"~"The color is green"~"The color is yellow"~"The color is red"~"Invalid selection"
+8~break;~end;~}~continue;
+9~case~switch~condition~if
+10~"The color is yellow"~"The color is green"~"The color is red"~"The color is blue"~"Invalid selection"
+11~break;~end;~}~continue;~else
+12~default~if~else~else if(selection < 1)
+13~"Invalid selection"~"The color is green"~"The color is red"~"The color is blue"
+###
+###
+13. Console Menu
+###
+multiselect~3
+###
+Write a menu application. Each menu selection should display a different greeting:
+
+Scanner input = new Scanner(System.in);
+System.out.println("Menu");
+System.out.println("1. Hello");
+System.out.println("2. How are you?");
+System.out.println("3. What's up");
+System.out.print("Please make your selection: ");
+
+String selection = input.nextLine();
+
+[5]([6]) {
+    [7]:
+        System.out.println("Hello!");
+        [8]
+    [9]:
+        System.out.println("How are you?");
+        [10]
+    [11]:
+        System.out.println("What's up?");
+        [12]
+    [13]:
+        System.out.println("Invalid Selection");
+}
+###
+5~switch~if~case~for~loop~condition
+6~selection~selection == "1"~selection > 0~userInput~String selection~String userInput
+7~case "1"~case 1~switch 1~condition "1"~default~case default
+8~break;~continue;~switch;~end;~case;~;
+9~case "2"~case 2~switch 2~condition "2"~default~case default
+10~break;~continue;~switch;~end;~case;~;
+11~case "3"~case 3~switch 3~condition "3"~default~case default
+12~break;~continue;~switch;~end;~case;~;
+13~default~case "4"~case 4~switch 4~condition "4"~case default
+###
+######
+Unit 2 Terminology
+###
+01. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+if (count == 1)
+
+In this code, if is ____________
+###
+1~a Java keyword~a declaration keyword~a statement terminator~a variable name~the assignment operator~the variable type~a String literal~an integer
+###
+###
+02. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+if (count >= 3) {}
+
+In this code, count is ____________
+###
+1~a variable name~a declaration keyword~a statement terminator~the assignment operator~the variable type~a String literal~an integer
+###
+###
+03. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+if (age >= 21) {
+    System.out.println("You can drink alcohol legally");
+}
+
+In this code, the greater-than(>) and equals sign(=) together are ____________
+###
+1~a relational operator~a variable name~a logical operator~a statement terminator~the assignment operator~the variable type~a String literal~an integer
+###
+###
+04. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+if (number < 8 &amp;&amp; number > 4) {}
+
+In this code, the double ampersand(&amp;&amp;) is ____________
+###
+1~a logical operator~a relational operator~an addition operator~the assignment operator~a String concatenation operator~part of a variable name~part of a String literal~a multiplication operator
+###
+###
+05. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+if (accountBalance == 2000) {}
+
+In this code, the double equals(==) is ____________
+###
+1~a relational operator~the assignment operator~a variable name~a logical operator~a statement terminator~the variable type~a String literal~an integer
+###
+###
+06. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+if (giants == "real") {}
+
+In this code, real is ____________
+###
+1~a String literal~a statement terminator~the assignment operator~a variable name~a declaration keyword~the variable type~an integer
+###
+###
+07. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+if (breed == "black lab") {}
+
+This code represents ____________
+###
+1~an if statement~a loop~output~input~a declaration statement~a statement termination
+###
+###
+08. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+count == 5
+
+This code represents ____________
+###
+1~a boolean expression~a statement termination~an assignment statement~a declaration statement~input~output
+###
+###
+10. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+bears = false;
+
+This code, as a whole, represents ____________
+###
+1~an assignment statement~a boolean value~a statement terminator~a String literal~a variable name~a declaration keyword~an integer
+###
+###
+11. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+if (number < 8) {}
+
+In this code, the less-than sign(<) is ____________
+###
+1~a relational operator~an addition operator~the assignment operator~a logical operator~a String concatenation operator~part of a variable name~part of a String literal~a multiplication operator
+###
+###
+12. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+if (number < 8 || number > 4) {}
+
+In this code, the double pipe(||) is ____________
+###
+1~a logical operator~a relational operator~an addition operator~the assignment operator~a String concatenation operator~part of a variable name~part of a String literal~a multiplication operator
+###
+###
+13. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+switch(number) {
+    case 3:
+        // code here
+}
+
+This code is an example of ____________
+###
+1~a switch statement~an if statement~an assignment statement~a boolean expression~a String concatenation
+###
+###
+14. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+if (count == 2) {
+    // code here
+}
+
+In this code, the open curly brace({) is ____________
+###
+1~the beginning of a code block~a statement terminator~the beginning of a boolean expression~the end of a code block~the beginning of a case block~the beginning of a String literal
+###
+###
+16. Terminology
+###
+multichoice~1
+###
+Consider the following code:
+if (count > 5) {
+    // code here
+} else {}
+
+In this code, else {} is ____________
+###
+1~an else statement~an if statement~an assignment statement~a multiplication statement~a boolean expression~a String interpolation
+###
+###
+17. Terminology
+###
+multiselect~1
+###
+Identify the function for each item:
+> [1]
+< [2]
+>= [3]
+<= [4]
+!= [5]
+== [6]
+###
+1~returns true if the value to the left is greater than the value to the right~returns true if the value to the right is greater than the value to the left~returns true if the values are equal~returns true if the values are not equal~returns true if either value is greater than the other
+2~returns true if the value to the left is less than the value to the right~returns true if the value to the right is less than the value to the left~returns true if the values are equal~returns true if the values are not equal~returns true if either value is less than the other
+3~returns true if the value to the left is greater than or equal to the value to the right~returns true if the value to the right is greater than or equal to the value to the left~returns true if the values are equal~returns true if the values are not equal~returns true if either value is greater than the other or both values are equal
+4~returns true if the value to the left is less than or equal to the value to the right~returns true if the value to the right is less than or equal to the value to the left~returns true if the values are equal~returns true if the values are not equal~returns true if either value is less than the other or both values are equal
+5~returns true if the values are not equal~returns true if the value to the left is greater than the value to the right~returns true if the value to the right is less than or equal to the value to the left~returns true if the values are equal~returns true if either value is greater than the other or both values are equal
+6~returns true if the values are equal~assigns the value on the right to the variable on the left~returns true if the value to the right is greater than the value to the left~returns true if the values are not equal~returns true if either value is less than the other
+###
+###
+18. Terminology
+###
+multiselect~1
+###
+Consider the following code:
+if (name == "Bob Johnson") {
+
+} else {}
+
+In this code,
+if is [1]
+name is [2]
+the double equals(==) is [3]
+name == "Bob Johnson" is [4]
+{} is [5]
+This code excerpt is an example of [6]
+###
+1~a Java keyword~a declaration keyword~a statement terminator~a variable name~the assignment operator~the variable type~a String literal~an integer
+2~a variable name~a declaration keyword~a statement terminator~the assignment operator~the variable type~a String literal~an integer
+3~a relational operator~the assignment operator~a declaration keyword~a statement terminator~the variable type~a variable name~a String literal~an integer
+4~a boolean expression~a String literal~a declaration statement~a statement termination~an assignment statement~the variable type~a variable name
+5~an empty code block~a statement terminator~a declaration keyword~a switch statement~an empty assignment~the variable type~a String literal~an integer
+6~an if-else statement~a switch statement~a paragraph tag~an assignment statement~a declaration statement~a boolean statement
+###
+######
+Unit 2 - Exercise 1
+description~Complete this Java exercise. Note: For readability and proper grading, all operators should have a space on either side (e.g. 1 + 1 = 2) whereas (1+1 = 2) will be marked incorrect
+###
+01. Guessing Game
+###
+multiblank~20
+###
+Write a program that will allow the user to guess a number between 1 and 10. The program will set a variable to the number to be guessed. It will then ask the user to enter a number and display whether the guess was too high, too low, or correct.
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int number = 6;
+        System.out.print("Guess a number between 1 and 10: ");
+        int guess = {1}(input.nextLine());
+
+        {2} ({3}) {
+            System.out.println("Too high");
+        }
+        {4} ({5}) {
+            System.out.println("You got it!");
+        }
+        {6} ({7}) {
+            System.out.println("Too low");
+        }
+    }
+}
+1. [1] 2. [2] 3. [3] 4. [4] 5. [5] 6. [6] 7. [7]
+###
+1~Integer.parseInt~Int32.Parse
+2~if
+3~guess > number~number < guess
+4~if~else if
+5~guess == number~number == guess
+6~if~else if
+7~guess < number~number > guess
+###
+Check out a working example of this exercise:
+Exercise 2-1~https://repl.it/@jmunger/CSC-140-Exercise-2-1-klose
+######
+Unit 2 - Exercise 2
+description~Complete this Java exercise. Note: For readability and proper grading, all operators should have a space on either side (e.g. 1 + 1 = 2) whereas (1+1 = 2) will be marked incorrect
+###
+02. Greeting By Hour
+###
+multiblank~20
+###
+Write a program that asks the user for the hour in a 24hr format. Greet the user for the morning, afternoon, or evening, depending on whether the hour is or later than 6, 12, or 18 respectively. If the hour isn't within these ranges, wish the user a good day
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the hour in military time (1-24): ");
+        int hour = {1}
+
+        {2} ({3}) {
+        System.out.println("Good evening");
+        } {4} ({5}) {
+        System.out.println("Good afternoon");
+        } {6} ({7}) {
+        System.out.println("Good morning");
+        } {8} {
+        System.out.println("Good day");
+        }
+    }
+}
+1. [1] 2. [2] 3. [3] 4. [4] 5. [5] 6. [6] 7. [7] 8. [8]
+###
+1~Integer.parseInt(input.nextLine());
+2~if
+3~hour >= 18
+4~else if
+5~hour >= 12
+6~else if
+7~hour >= 6
+8~else
+###
+Check out a working example of this exercise:
+Exercise 2-2~https://repl.it/@jmunger/CSC-140-Exercise-2-2-sndea
+######
+Unit 2 - Exercise 3
+description~Complete this Java exercise. Note: For readability and proper grading, all operators should have a space on either side (e.g. 1 + 1 = 2) whereas (1+1 = 2) will be marked incorrect
+###
+03. Menu
+###
+multiblank~20
+###
+Write a program that displays a menu with the following options on separate lines: 1. Greet me, 2. Insult me, 3. Tell me a joke. The program should ask the user for a selection from the menu and perform the selected action. If the user enters anything other than one of the options, it should inform them that they've made an invalid selection:
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("1. Greet me<b>{1}</b>2.Insult me<b>{2}</b>3. Tell me a joke");
+        System.out.print("Please make a selection: ");
+        String selection = <b>{3}</b>
+
+        <b>{4}</b> (<b>{5}</b>) {
+            <b>{6}</b>:
+                System.out.println("Hello, human!");
+                <b>{7}</b>
+            <b>{8}</b>:
+                System.out.println("Your mother was a hamster and your father smelt of elderberries!");
+                <b>{9}</b>
+            <b>{10}</b>:
+                System.out.print("Why did the chicken cross the road?");
+                input.nextLine();
+                System.out.println("to get to the other side!");
+                <b>{11}</b>
+            <b>{12}</b>:
+                System.out.println("Invalid Selection");
+        }
+    }
+}
+1. [1]<br>2. [2]<br>3. [3]<br>4. [4]<br>5. [5]<br>6. [6]<br>7. [7]<br>8. [8]<br>9. [9]<br>10. [10]<br>11. [11]<br>12. [12]<br>
+###
+1~\n
+2~\n
+3~input.nextLine();
+4~switch
+5~selection
+6~case "1"
+7~break;
+8~case "2"
+9~break;
+10~case "3"
+11~break;
+12~default
+###
+Check out a working example of this exercise:
+Exercise 2-3~https://repl.it/@jmunger/CSC-140-Exercise-2-3-lopsw
 ######
